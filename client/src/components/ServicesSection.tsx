@@ -8,7 +8,7 @@ interface ServiceFeature {
 }
 
 interface ServiceProps {
-  icon: React.ReactNode;
+  icon: string | React.ReactNode;
   title: string;
   description: string;
   features: ServiceFeature[];
@@ -16,6 +16,16 @@ interface ServiceProps {
 
 interface ServicesSectionProps {
   data?: ServiceProps[];
+}
+
+// Helper function to convert SVG string to React component
+function createIconFromString(svgString: string): React.ReactNode {
+  return (
+    <div
+      className="h-12 w-12 text-primary"
+      dangerouslySetInnerHTML={{ __html: svgString }}
+    />
+  );
 }
 
 const defaultServices: ServiceProps[] = [
@@ -80,6 +90,14 @@ const defaultServices: ServiceProps[] = [
 function ServiceCard({ service, index }: { service: ServiceProps, index: number }) {
   const cardRef = useRef(null);
   const isInView = useInView(cardRef, { once: true, amount: 0.2 });
+  
+  // Render the icon - could be a React Node or a string from database
+  const renderIcon = () => {
+    if (typeof service.icon === 'string') {
+      return createIconFromString(service.icon);
+    }
+    return service.icon;
+  };
 
   return (
     <motion.div 
@@ -90,7 +108,7 @@ function ServiceCard({ service, index }: { service: ServiceProps, index: number 
       transition={{ duration: 0.5, delay: index * 0.1 }}
     >
       <div className="text-primary mb-4">
-        {service.icon}
+        {renderIcon()}
       </div>
       <h3 className="text-xl font-bold mb-3">{service.title}</h3>
       <p className="text-gray-600 mb-4">
