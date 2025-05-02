@@ -13,7 +13,9 @@ export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const { data: websiteData } = useQuery({
-    queryKey: ['/api/website-data'],
+    queryKey: ['/api/website-data', Date.now()], // Füge einen Timestamp hinzu, um Cache zu umgehen
+    refetchOnMount: true,
+    staleTime: 0,
   });
 
   useEffect(() => {

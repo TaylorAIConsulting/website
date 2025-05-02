@@ -48,6 +48,11 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // API route to get website data
   app.get('/api/website-data', async (req, res) => {
     try {
+      // Add cache-control headers to prevent caching
+      res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
+      res.setHeader('Pragma', 'no-cache');
+      res.setHeader('Expires', '0');
+      
       const websiteData = await storage.getWebsiteData();
       
       return res.status(200).json(websiteData);
