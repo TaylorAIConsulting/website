@@ -28,6 +28,9 @@ export const storage = {
   async getWebsiteData() {
     const founders = await db.query.founders.findMany({
       orderBy: schema.founders.id,
+      with: {
+        badges: true,
+      },
     });
 
     const services = await db.query.services.findMany({
@@ -60,8 +63,14 @@ export const storage = {
       })),
     }));
 
+    // Format the founders data
+    const formattedFounders = founders.map(founder => ({
+      ...founder,
+      badges: founder.badges.map(badge => badge.badge)
+    }));
+
     return {
-      founders,
+      founders: formattedFounders,
       services: formattedServices,
       caseStudies: formattedCaseStudies,
       hero: {

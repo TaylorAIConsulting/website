@@ -81,7 +81,6 @@ function CaseStudyCard({ caseStudy, index }: { caseStudy: CaseStudyProps, index:
     >
       <div className="lg:flex">
         <div className="lg:w-1/3 relative">
-          <div className="absolute inset-0 bg-gray-700 animate-pulse"></div>
           <img 
             className="h-64 lg:h-full w-full object-cover" 
             src={caseStudy.image} 
