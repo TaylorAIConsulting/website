@@ -52,17 +52,17 @@ const defaultCaseStudies: CaseStudyProps[] = [
     image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
   },
   {
-    title: "Intelligente Patientenakten-Verwaltung für MediCare Klinik",
-    description: "Entwicklung einer KI-gestützten Lösung zur Digitalisierung und intelligenten Verwaltung von Patientenakten, die die Bearbeitungszeit um 68% reduziert hat.",
-    industry: "Gesundheitswesen",
-    type: "Dokumentenmanagement",
+    title: "Digital Entertainment KI Prototyping",
+    description: "Prototyping eines KI-Avatars",
+    industry: "Unterhaltung",
+    type: "KI-Prototyping",
     results: [
-      { text: "Implementierung eines OCR-Systems mit medizinischer Fachterminologie" },
-      { text: "Automatische Kategorisierung und Indexierung von Patientendaten" },
-      { text: "Compliance-konforme Datensicherheit und -verschlüsselung" }
+      { text: "Integration von NLP, GANs und Motion-Capture-Technologien" },
+      { text: "Plattformintegration auf Social Media" },
+      { text: "Erfassung von Nutzer-Feedback und erste Datenanalysen" }
     ],
-    testimonial: "Die Lösung hat unsere Verwaltungsprozesse transformiert. Ärzte haben nun sofortigen Zugriff auf relevante Patientendaten.",
-    author: "Dr. Julia Weber, Ärztliche Direktorin",
+    testimonial: "KI Charakter interagiert in Echtzeit und erhielt positives Feedback – ein klarer Beweis für die technische Machbarkeit.",
+    author: "Entertainment Studios",
     image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
   }
 ];
