@@ -37,6 +37,13 @@ export const foundersRelations = relations(founders, ({ many }) => ({
   badges: many(founderBadges),
 }));
 
+export const founderBadgesRelations = relations(founderBadges, ({ one }) => ({
+  founder: one(founders, {
+    fields: [founderBadges.founderId],
+    references: [founders.id],
+  }),
+}));
+
 // Services
 export const services = pgTable("services", {
   id: serial("id").primaryKey(),
@@ -53,6 +60,13 @@ export const serviceFeatures = pgTable("service_features", {
 
 export const servicesRelations = relations(services, ({ many }) => ({
   features: many(serviceFeatures),
+}));
+
+export const serviceFeaturesRelations = relations(serviceFeatures, ({ one }) => ({
+  service: one(services, {
+    fields: [serviceFeatures.serviceId],
+    references: [services.id],
+  }),
 }));
 
 // Case Studies
@@ -75,6 +89,13 @@ export const caseStudyResults = pgTable("case_study_results", {
 
 export const caseStudiesRelations = relations(caseStudies, ({ many }) => ({
   results: many(caseStudyResults),
+}));
+
+export const caseStudyResultsRelations = relations(caseStudyResults, ({ one }) => ({
+  caseStudy: one(caseStudies, {
+    fields: [caseStudyResults.caseStudyId],
+    references: [caseStudies.id],
+  }),
 }));
 
 // Contact Form Submissions

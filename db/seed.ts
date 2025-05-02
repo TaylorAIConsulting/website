@@ -17,7 +17,7 @@ async function seed() {
         name: "Dino Fetzer",
         role: "Co-Founder & AI Manager",
         bio: "Dino ist spezialisiert auf die Integration von KI in bestehende Geschäftsprozesse und hat zahlreiche erfolgreiche Automatisierungsprojekte geleitet.",
-        image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        image: "/images/dino_fetzer.png"
       }
     ];
 

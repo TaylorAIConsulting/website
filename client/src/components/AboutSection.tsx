@@ -27,7 +27,7 @@ const defaultFounders: FounderProps[] = [
     role: "Co-Founder & AI Manager",
     bio: "Dino ist spezialisiert auf die Integration von KI in bestehende Geschäftsprozesse und hat zahlreiche erfolgreiche Automatisierungsprojekte geleitet.",
     badges: ["AI Manager Zertifiziert", "RPA-Spezialist"],
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    image: "/images/dino_fetzer.png"
   }
 ];
 
@@ -44,7 +44,6 @@ function FounderCard({ founder }: { founder: FounderProps }) {
       transition={{ duration: 0.5 }}
     >
       <div className="h-64 bg-gray-200 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gray-300 animate-pulse"></div>
         <img 
           className="w-full h-full object-cover" 
           src={founder.image} 
