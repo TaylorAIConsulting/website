@@ -25,8 +25,8 @@ const defaultFounders: FounderProps[] = [
   {
     name: "Dino Fetzer",
     role: "Co-Founder & AI Manager",
-    bio: "Dino ist spezialisiert auf die Integration von KI in bestehende Geschäftsprozesse und hat zahlreiche erfolgreiche Automatisierungsprojekte geleitet.",
-    badges: ["AI Manager Zertifiziert", "RPA-Spezialist"],
+    bio: "Dino Fetzer, zertifizierter AI-Manager und Werbe-Filmregisseur, spezialisiert auf innovative KI-Automation und Content-Erstellung.",
+    badges: ["AI Manager Zertifiziert", "Award Winning Director"],
     image: "/images/dino_fetzer.png"
   }
 ];
