@@ -15,22 +15,25 @@ interface AboutSectionProps {
   data?: FounderProps[];
 }
 
-const defaultFounders: FounderProps[] = [
-  {
-    name: "Andreas Schneider",
-    role: "Co-Founder & AI Manager",
-    bio: "Mit über 10 Jahren Erfahrung in der Technologiebranche unterstützt Andreas Unternehmen dabei, das volle Potenzial von KI-Technologien auszuschöpfen.",
-    badges: ["AI Manager Zertifiziert", "KI-Experte"],
-    image: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    name: "Dino Fetzer",
-    role: "Co-Founder & AI Manager",
-    bio: "Dino Fetzer, zertifizierter AI-Manager und Werbe-Filmregisseur, spezialisiert auf innovative KI-Automation und Content-Erstellung.",
-    badges: ["AI Manager Zertifiziert", "Award Winning Director"],
-    image: "/images/dino_fetzer.png"
-  }
-];
+// Using a function to get translated founder data
+function getTranslatedFounders(t: (key: string) => string): FounderProps[] {
+  return [
+    {
+      name: t('about.founder1.name'),
+      role: t('about.founder1.role'),
+      bio: t('about.founder1.bio'),
+      badges: [t('about.founder1.badge1'), t('about.founder1.badge2')],
+      image: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      name: t('about.founder2.name'),
+      role: t('about.founder2.role'),
+      bio: t('about.founder2.bio'),
+      badges: [t('about.founder2.badge1'), t('about.founder2.badge2')],
+      image: "/images/dino_fetzer.png"
+    }
+  ];
+};
 
 function FounderCard({ founder }: { founder: FounderProps }) {
   const cardRef = useRef(null);
@@ -70,10 +73,11 @@ function FounderCard({ founder }: { founder: FounderProps }) {
   );
 }
 
-export default function AboutSection({ data = defaultFounders }: AboutSectionProps) {
+export default function AboutSection({ data }: AboutSectionProps) {
   const { t } = useLanguage();
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
+  const founderData = data || getTranslatedFounders(t);
 
   return (
     <section id="about" ref={sectionRef} className="section py-20 bg-neutral-light">
@@ -92,7 +96,7 @@ export default function AboutSection({ data = defaultFounders }: AboutSectionPro
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-          {data.map((founder, index) => (
+          {founderData.map((founder, index) => (
             <FounderCard key={index} founder={founder} />
           ))}
         </div>

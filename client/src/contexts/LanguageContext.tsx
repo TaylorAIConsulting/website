@@ -213,6 +213,28 @@ const translations: Record<Language, Record<string, string>> = {
     'caseStudies.title': 'Success Stories',
     'caseStudies.description': 'Discover how we have helped other companies save time and resources through AI automation and increase their efficiency.',
     
+    // Case Study 1
+    'caseStudies.case1.title': 'Automated Supply Chain Management for LogiTech GmbH',
+    'caseStudies.case1.description': 'The integration of our AI-based automation solution into supply chain management increased LogiTech\'s efficiency by 35% and reduced the error rate by 78%.',
+    'caseStudies.case1.industry': 'Logistics Industry',
+    'caseStudies.case1.type': 'Process Automation',
+    'caseStudies.case1.result1': 'Implementation of an AI-powered route optimization system',
+    'caseStudies.case1.result2': 'Automation of inventory management with predictive analytics',
+    'caseStudies.case1.result3': 'Reduction of delivery time by 28%',
+    'caseStudies.case1.testimonial': 'The AI solution from Taylor Consulting has revolutionized our supply chain. We can now plan much more precisely and respond more quickly to changes.',
+    'caseStudies.case1.author': 'Michael Berger, CIO',
+    
+    // Case Study 2
+    'caseStudies.case2.title': 'AI-Powered Fraud Detection for FinSecure AG',
+    'caseStudies.case2.description': 'Implementation of an intelligent fraud detection system that analyzes suspicious transactions in real-time and identifies potential fraud cases with 97% accuracy.',
+    'caseStudies.case2.industry': 'Financial Sector',
+    'caseStudies.case2.type': 'Data Analysis',
+    'caseStudies.case2.result1': 'Development of a self-learning algorithm for fraud detection',
+    'caseStudies.case2.result2': 'Reduction of false alarms by 82%',
+    'caseStudies.case2.result3': 'Savings of approx. 2.4 million euros in the first year',
+    'caseStudies.case2.testimonial': 'With Taylor Consulting\'s AI system, we were able to take our fraud detection to a new level while significantly reducing the workload for our analysts.',
+    'caseStudies.case2.author': 'Dr. Sabine Meier, Head of Risk Management',
+    
     // Contact Section
     'contact.title': 'Contact',
     'contact.description': 'Ready to optimize your processes? Contact us for a non-binding consultation.',

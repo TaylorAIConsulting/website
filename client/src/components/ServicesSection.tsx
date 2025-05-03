@@ -29,64 +29,67 @@ function createIconFromString(svgString: string): React.ReactNode {
   );
 }
 
-const defaultServices: ServiceProps[] = [
-  {
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
-      </svg>
-    ),
-    title: "Prozess-Optimierung mit RPA",
-    description: "Automatisieren Sie repetitive Aufgaben und Workflows mit Robotic Process Automation und steigern Sie Ihre Effizienz um bis zu 80%.",
-    features: [
-      { text: "Reduzierung manueller Eingaben" },
-      { text: "Fehlerminimierung" },
-      { text: "24/7 Betrieb" }
-    ]
-  },
-  {
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-      </svg>
-    ),
-    title: "KI-gestützte Datenanalyse",
-    description: "Nutzen Sie die Kraft der künstlichen Intelligenz, um Ihre Daten zu analysieren und wertvolle Erkenntnisse zu gewinnen.",
-    features: [
-      { text: "Predictive Analytics" },
-      { text: "Muster-Erkennung" },
-      { text: "Entscheidungsunterstützung" }
-    ]
-  },
-  {
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
-      </svg>
-    ),
-    title: "Intelligente Kommunikationssysteme",
-    description: "Automatisieren Sie Kundenkommunikation mit intelligenten Chatbots und NLP-Technologien für besseren Service.",
-    features: [
-      { text: "Chatbot-Integration" },
-      { text: "Sprach- und Textanalyse" },
-      { text: "Sentiment-Analyse" }
-    ]
-  },
-  {
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-      </svg>
-    ),
-    title: "Dokumenten-Automatisierung",
-    description: "Extrahieren Sie Informationen aus Dokumenten, automatisieren Sie die Verarbeitung und optimieren Sie Ihre Workflows.",
-    features: [
-      { text: "OCR-Technologie" },
-      { text: "Intelligente Klassifizierung" },
-      { text: "Automatische Datenextraktion" }
-    ]
-  }
-];
+// Function to get translated services
+function getTranslatedServices(t: (key: string) => string): ServiceProps[] {
+  return [
+    {
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+        </svg>
+      ),
+      title: t('services.service1.title'),
+      description: t('services.service1.description'),
+      features: [
+        { text: t('services.service1.feature1') },
+        { text: t('services.service1.feature2') },
+        { text: t('services.service1.feature3') }
+      ]
+    },
+    {
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+        </svg>
+      ),
+      title: t('services.service2.title'),
+      description: t('services.service2.description'),
+      features: [
+        { text: t('services.service2.feature1') },
+        { text: t('services.service2.feature2') },
+        { text: t('services.service2.feature3') }
+      ]
+    },
+    {
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+        </svg>
+      ),
+      title: t('services.service3.title'),
+      description: t('services.service3.description'),
+      features: [
+        { text: t('services.service3.feature1') },
+        { text: t('services.service3.feature2') },
+        { text: t('services.service3.feature3') }
+      ]
+    },
+    {
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+        </svg>
+      ),
+      title: t('services.service4.title'),
+      description: t('services.service4.description'),
+      features: [
+        { text: t('services.service4.feature1') },
+        { text: t('services.service4.feature2') },
+        { text: t('services.service4.feature3') }
+      ]
+    }
+  ];
+};
 
 function ServiceCard({ service, index }: { service: ServiceProps, index: number }) {
   const cardRef = useRef(null);
@@ -127,10 +130,11 @@ function ServiceCard({ service, index }: { service: ServiceProps, index: number 
   );
 }
 
-export default function ServicesSection({ data = defaultServices }: ServicesSectionProps) {
+export default function ServicesSection({ data }: ServicesSectionProps) {
   const { t } = useLanguage();
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
+  const serviceData = data || getTranslatedServices(t);
 
   return (
     <section id="services" ref={sectionRef} className="section py-20 bg-white">
@@ -149,7 +153,7 @@ export default function ServicesSection({ data = defaultServices }: ServicesSect
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {data.map((service, index) => (
+          {serviceData.map((service, index) => (
             <ServiceCard key={index} service={service} index={index} />
           ))}
         </div>
