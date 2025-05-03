@@ -21,17 +21,14 @@ import { Mail, Phone, MapPin, Linkedin, Twitter } from "lucide-react";
 import { apiRequest } from "@/lib/queryClient";
 import { useLanguage } from "../contexts/LanguageContext";
 
-const contactFormSchema = (t: (key: string) => string) => z.object({
-  name: z.string().min(2, t('contact.validation.nameLength')),
-  email: z.string().email(t('contact.validation.emailValid')),
-  subject: z.string().optional(),
-  message: z.string().min(10, t('contact.validation.messageLength')),
-  acceptPolicy: z.literal(true, {
-    errorMap: () => ({ message: t('contact.validation.acceptPolicy') }),
-  }),
-});
-
-type ContactFormValues = z.infer<ReturnType<typeof contactFormSchema>>;
+// Define type for the form values
+type ContactFormValues = {
+  name: string;
+  email: string;
+  subject?: string;
+  message: string;
+  acceptPolicy: boolean;
+}
 
 export default function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -40,8 +37,43 @@ export default function ContactSection() {
   const { toast } = useToast();
   const { t, language } = useLanguage();
 
+  // Create the schema for validation
+  const formSchema = z.object({
+    name: z.string().min(2, t('contact.validation.nameLength')),
+    email: z.string().email(t('contact.validation.emailValid')),
+    subject: z.string().optional(),
+    message: z.string().min(10, t('contact.validation.messageLength')),
+    acceptPolicy: z.literal(true, {
+      errorMap: () => ({ message: t('contact.validation.acceptPolicy') }),
+    }),
+  });
+  
+  // Create a custom resolver that uses our schema
+  const customResolver = (values: any) => {
+    try {
+      const validatedData = formSchema.parse(values);
+      return {
+        values: validatedData,
+        errors: {},
+      };
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        // Convert ZodError to format expected by react-hook-form
+        const errors = error.errors.reduce((acc, curr) => {
+          const path = curr.path.join('.');
+          return {
+            ...acc,
+            [path]: { type: 'validation', message: curr.message },
+          };
+        }, {});
+        return { values: {}, errors };
+      }
+      return { values: {}, errors: { root: { type: 'validate', message: 'Validation failed' } } };
+    }
+  };
+
   const form = useForm<ContactFormValues>({
-    resolver: zodResolver(contactFormSchema),
+    resolver: async (values) => customResolver(values),
     defaultValues: {
       name: "",
       email: "",

@@ -66,6 +66,12 @@ const translations: Record<Language, Record<string, string>> = {
     'contact.toast.errorTitle': 'Fehler beim Senden',
     'contact.toast.errorDescription': 'Es gab ein Problem beim Senden Ihrer Nachricht. Bitte versuchen Sie es später erneut.',
     
+    // Contact Form Validation
+    'contact.validation.nameLength': 'Name muss mindestens 2 Zeichen lang sein',
+    'contact.validation.emailValid': 'Bitte geben Sie eine gültige E-Mail-Adresse ein',
+    'contact.validation.messageLength': 'Nachricht muss mindestens 10 Zeichen lang sein',
+    'contact.validation.acceptPolicy': 'Sie müssen die Datenschutzbestimmungen akzeptieren',
+    
     // Footer
     'footer.company': 'Taylor Consulting',
     'footer.description': 'Ihr Partner für maßgeschneiderte KI-Automatisierungs-lösungen. Wir helfen Ihnen, Ihre Prozesse zu optimieren und Ressourcen effizient einzusetzen.',
@@ -133,6 +139,12 @@ const translations: Record<Language, Record<string, string>> = {
     'contact.toast.successDescription': 'Thank you for your message. We will get back to you shortly.',
     'contact.toast.errorTitle': 'Error Sending Message',
     'contact.toast.errorDescription': 'There was a problem sending your message. Please try again later.',
+    
+    // Contact Form Validation
+    'contact.validation.nameLength': 'Name must be at least 2 characters long',
+    'contact.validation.emailValid': 'Please enter a valid email address',
+    'contact.validation.messageLength': 'Message must be at least 10 characters long',
+    'contact.validation.acceptPolicy': 'You must accept the privacy policy',
     
     // Footer
     'footer.company': 'Taylor Consulting',
