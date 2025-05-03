@@ -1,7 +1,9 @@
 import { Link } from "wouter";
 import { Linkedin, Twitter } from "lucide-react";
+import { useLanguage } from "../contexts/LanguageContext";
 
 export default function Footer() {
+  const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -11,27 +13,27 @@ export default function Footer() {
           <div className="md:col-span-1">
             <h3 className="text-xl font-bold mb-4">Taylor Consulting</h3>
             <p className="text-gray-400 mb-4 max-w-[180px]">
-              Ihr Partner für maßgeschneiderte KI-Automatisierungs-lösungen. Wir helfen Ihnen, Ihre Prozesse zu optimieren und Ressourcen effizient einzusetzen.
+              {t('footer.companyDescription')}
             </p>
           </div>
           
           <div className="md:col-span-1">
-            <h4 className="text-lg font-semibold mb-4">Sitemap</h4>
+            <h4 className="text-lg font-semibold mb-4">{t('footer.sitemap')}</h4>
             <ul className="space-y-2">
-              <li><a href="#home" className="text-gray-400 hover:text-primary transition duration-300">Home</a></li>
-              <li><a href="#about" className="text-gray-400 hover:text-primary transition duration-300">Über uns</a></li>
-              <li><a href="#services" className="text-gray-400 hover:text-primary transition duration-300">Services</a></li>
-              <li><a href="#case-studies" className="text-gray-400 hover:text-primary transition duration-300">Referenzen</a></li>
-              <li><a href="#contact" className="text-gray-400 hover:text-primary transition duration-300">Kontakt</a></li>
+              <li><a href="#home" className="text-gray-400 hover:text-primary transition duration-300">{t('footer.home')}</a></li>
+              <li><a href="#about" className="text-gray-400 hover:text-primary transition duration-300">{t('footer.about')}</a></li>
+              <li><a href="#services" className="text-gray-400 hover:text-primary transition duration-300">{t('footer.services')}</a></li>
+              <li><a href="#case-studies" className="text-gray-400 hover:text-primary transition duration-300">{t('footer.caseStudies')}</a></li>
+              <li><a href="#contact" className="text-gray-400 hover:text-primary transition duration-300">{t('footer.contact')}</a></li>
             </ul>
           </div>
           
           <div className="md:col-span-1">
-            <h4 className="text-lg font-semibold mb-4">Rechtliches</h4>
+            <h4 className="text-lg font-semibold mb-4">{t('footer.legal')}</h4>
             <ul className="space-y-2">
-              <li><Link href="/impressum" className="text-gray-400 hover:text-primary transition duration-300">Impressum</Link></li>
-              <li><Link href="/datenschutz" className="text-gray-400 hover:text-primary transition duration-300">Datenschutz</Link></li>
-              <li><Link href="/agb" className="text-gray-400 hover:text-primary transition duration-300">AGB</Link></li>
+              <li><Link href="/impressum" className="text-gray-400 hover:text-primary transition duration-300">{t('footer.imprint')}</Link></li>
+              <li><Link href="/datenschutz" className="text-gray-400 hover:text-primary transition duration-300">{t('footer.privacy')}</Link></li>
+              <li><Link href="/agb" className="text-gray-400 hover:text-primary transition duration-300">{t('footer.terms')}</Link></li>
             </ul>
           </div>
           

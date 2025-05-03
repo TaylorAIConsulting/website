@@ -23,50 +23,39 @@ interface CaseStudiesSectionProps {
   data?: CaseStudyProps[];
 }
 
-const defaultCaseStudies: CaseStudyProps[] = [
-  {
-    title: "Automatisierte Lieferkettenverwaltung für LogiTech GmbH",
-    description: "Die Integration unserer KI-basierten Automatisierungslösung in die Lieferkettenverwaltung hat die Effizienz von LogiTech um 35% gesteigert und die Fehlerquote um 78% reduziert.",
-    industry: "Logistikbranche",
-    type: "Prozessautomatisierung",
-    results: [
-      { text: "Implementierung eines KI-gestützten Routenoptimierungssystems" },
-      { text: "Automatisierung der Bestandsverwaltung mit Predictive Analytics" },
-      { text: "Reduzierung der Lieferzeit um 28%" }
-    ],
-    testimonial: "Die KI-Lösung von Taylor Consulting hat unsere Lieferkette revolutioniert. Wir können nun viel präziser planen und schneller auf Veränderungen reagieren.",
-    author: "Michael Berger, CIO",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    title: "KI-gestützte Betrugserkennung für FinSecure AG",
-    description: "Implementierung eines intelligenten Betrugserkennungssystems, das verdächtige Transaktionen in Echtzeit analysiert und potenzielle Betrugsfälle mit 97% Genauigkeit identifiziert.",
-    industry: "Finanzsektor",
-    type: "Datenanalyse",
-    results: [
-      { text: "Entwicklung eines selbstlernenden Algorithmus zur Betrugserkennung" },
-      { text: "Reduzierung falscher Alarme um 82%" },
-      { text: "Einsparungen von ca. 2,4 Millionen Euro im ersten Jahr" }
-    ],
-    testimonial: "Das KI-System hat unsere Betrugserkennung auf ein neues Level gehoben. Es lernt kontinuierlich und passt sich neuen Bedrohungen an.",
-    author: "Laura Schmidt, Head of Security",
-    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    title: "Digital Entertainment KI Prototyping",
-    description: "Prototyping eines KI-Avatars",
-    industry: "Unterhaltung",
-    type: "KI-Prototyping",
-    results: [
-      { text: "Integration von NLP, GANs und Motion-Capture-Technologien" },
-      { text: "Plattformintegration auf Social Media" },
-      { text: "Erfassung von Nutzer-Feedback und erste Datenanalysen" }
-    ],
-    testimonial: "KI Charakter interagiert in Echtzeit und erhielt positives Feedback – ein klarer Beweis für die technische Machbarkeit.",
-    author: "Entertainment Studios",
-    image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-  }
-];
+// Function to get translated case studies
+function getTranslatedCaseStudies(t: (key: string) => string): CaseStudyProps[] {
+  return [
+    {
+      title: t('caseStudies.case1.title'),
+      description: t('caseStudies.case1.description'),
+      industry: t('caseStudies.case1.industry'),
+      type: t('caseStudies.case1.type'),
+      results: [
+        { text: t('caseStudies.case1.result1') },
+        { text: t('caseStudies.case1.result2') },
+        { text: t('caseStudies.case1.result3') }
+      ],
+      testimonial: t('caseStudies.case1.testimonial'),
+      author: t('caseStudies.case1.author'),
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      title: t('caseStudies.case2.title'),
+      description: t('caseStudies.case2.description'),
+      industry: t('caseStudies.case2.industry'),
+      type: t('caseStudies.case2.type'),
+      results: [
+        { text: t('caseStudies.case2.result1') },
+        { text: t('caseStudies.case2.result2') },
+        { text: t('caseStudies.case2.result3') }
+      ],
+      testimonial: t('caseStudies.case2.testimonial'),
+      author: t('caseStudies.case2.author'),
+      image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    }
+  ];
+};
 
 function CaseStudyCard({ caseStudy, index }: { caseStudy: CaseStudyProps, index: number }) {
   const cardRef = useRef(null);
@@ -119,10 +108,11 @@ function CaseStudyCard({ caseStudy, index }: { caseStudy: CaseStudyProps, index:
   );
 }
 
-export default function CaseStudiesSection({ data = defaultCaseStudies }: CaseStudiesSectionProps) {
+export default function CaseStudiesSection({ data }: CaseStudiesSectionProps) {
   const { t } = useLanguage();
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
+  const caseStudyData = data || getTranslatedCaseStudies(t);
 
   return (
     <section id="case-studies" ref={sectionRef} className="section py-20 bg-secondary text-white">
@@ -141,7 +131,7 @@ export default function CaseStudiesSection({ data = defaultCaseStudies }: CaseSt
         </motion.div>
 
         <div className="space-y-12 max-w-5xl mx-auto">
-          {data.map((caseStudy, index) => (
+          {caseStudyData.map((caseStudy, index) => (
             <CaseStudyCard key={index} caseStudy={caseStudy} index={index} />
           ))}
         </div>
