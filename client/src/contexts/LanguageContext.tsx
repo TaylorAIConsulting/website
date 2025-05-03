@@ -137,14 +137,23 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Footer
     'footer.company': 'Taylor Consulting',
-    'footer.description': 'Ihr Partner für maßgeschneiderte KI-Automatisierungs-lösungen. Wir helfen Ihnen, Ihre Prozesse zu optimieren und Ressourcen effizient einzusetzen.',
+    'footer.companyDescription': 'Ihr Partner für maßgeschneiderte KI-Automatisierungs-lösungen. Wir helfen Ihnen, Ihre Prozesse zu optimieren und Ressourcen effizient einzusetzen.',
     'footer.sitemap': 'Sitemap',
+    'footer.home': 'Home',
+    'footer.about': 'Über uns',
+    'footer.services': 'Services',
+    'footer.caseStudies': 'Referenzen',
     'footer.legal': 'Rechtliches',
     'footer.imprint': 'Impressum',
     'footer.privacy': 'Datenschutz',
     'footer.terms': 'AGB',
     'footer.contact': 'Kontakt',
-    'footer.copyright': '© 2025 Taylor Consulting. Alle Rechte vorbehalten.'
+    'footer.address.street': 'Innovationsstraße 42',
+    'footer.address.city': '80331 München',
+    'footer.address.country': 'Deutschland',
+    'footer.phone': '+49 (0) 89 123 456 789',
+    'footer.email': 'info@taylor-consulting.de',
+    'footer.copyright': 'Alle Rechte vorbehalten.'
   },
   en: {
     // Navigation
@@ -274,14 +283,23 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Footer
     'footer.company': 'Taylor Consulting',
-    'footer.description': 'Your partner for customized AI automation solutions. We help you optimize your processes and use resources efficiently.',
+    'footer.companyDescription': 'Your partner for customized AI automation solutions. We help you optimize your processes and use resources efficiently.',
     'footer.sitemap': 'Sitemap',
+    'footer.home': 'Home',
+    'footer.about': 'About us',
+    'footer.services': 'Services',
+    'footer.caseStudies': 'Case Studies',
     'footer.legal': 'Legal',
     'footer.imprint': 'Imprint',
     'footer.privacy': 'Privacy Policy',
     'footer.terms': 'Terms & Conditions',
     'footer.contact': 'Contact',
-    'footer.copyright': '© 2025 Taylor Consulting. All rights reserved.'
+    'footer.address.street': 'Innovation Street 42',
+    'footer.address.city': '80331 Munich',
+    'footer.address.country': 'Germany',
+    'footer.phone': '+49 (0) 89 123 456 789',
+    'footer.email': 'info@taylor-consulting.de',
+    'footer.copyright': 'All rights reserved.'
   }
 };
 

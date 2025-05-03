@@ -134,7 +134,7 @@ export default function ServicesSection({ data }: ServicesSectionProps) {
   const { t } = useLanguage();
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
-  const serviceData = data || getTranslatedServices(t);
+  const serviceData = getTranslatedServices(t);
 
   return (
     <section id="services" ref={sectionRef} className="section py-20 bg-white">

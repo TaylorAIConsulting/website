@@ -38,16 +38,16 @@ export default function Footer() {
           </div>
           
           <div className="md:col-span-1">
-            <h4 className="text-lg font-semibold mb-4">Kontakt</h4>
+            <h4 className="text-lg font-semibold mb-4">{t('footer.contact')}</h4>
             <ul className="space-y-2 text-gray-400">
-              <li>Innovationsstraße 42</li>
-              <li>80331 München</li>
-              <li>Deutschland</li>
+              <li>{t('footer.address.street')}</li>
+              <li>{t('footer.address.city')}</li>
+              <li>{t('footer.address.country')}</li>
               <li className="pt-2">
-                <a href="tel:+4989123456789" className="hover:text-primary transition duration-300">+49 (0) 89 123 456 789</a>
+                <a href="tel:+4989123456789" className="hover:text-primary transition duration-300">{t('footer.phone')}</a>
               </li>
               <li>
-                <a href="mailto:info@taylor-consulting.de" className="hover:text-primary transition duration-300">info@taylor-consulting.de</a>
+                <a href="mailto:info@taylor-consulting.de" className="hover:text-primary transition duration-300">{t('footer.email')}</a>
               </li>
             </ul>
           </div>
@@ -56,7 +56,7 @@ export default function Footer() {
         <div className="border-t border-gray-800 pt-8 mt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-500 text-sm">
-              &copy; {currentYear} Taylor Consulting. Alle Rechte vorbehalten.
+              &copy; {currentYear} Taylor Consulting. {t('footer.copyright')}
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="text-gray-500 hover:text-primary transition duration-300" aria-label="LinkedIn">

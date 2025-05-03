@@ -112,7 +112,7 @@ export default function CaseStudiesSection({ data }: CaseStudiesSectionProps) {
   const { t } = useLanguage();
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
-  const caseStudyData = data || getTranslatedCaseStudies(t);
+  const caseStudyData = getTranslatedCaseStudies(t);
 
   return (
     <section id="case-studies" ref={sectionRef} className="section py-20 bg-secondary text-white">
