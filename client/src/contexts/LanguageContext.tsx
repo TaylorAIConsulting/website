@@ -27,13 +27,76 @@ const translations: Record<Language, Record<string, string>> = {
     'about.title': 'Über uns',
     'about.description': 'Taylor Consulting ist Ihr Partner für intelligente Prozessautomatisierung. Wir verbinden menschliche Expertise mit modernster KI-Technologie, um für Ihr Unternehmen maßgeschneiderte Automatisierungslösungen zu entwickeln.',
     
+    // Founders
+    'about.founder1.name': 'Andreas Schneider',
+    'about.founder1.role': 'Co-Founder & AI Manager',
+    'about.founder1.bio': 'Mit über 10 Jahren Erfahrung in der Technologiebranche unterstützt Andreas Unternehmen dabei, das volle Potenzial von KI-Technologien auszuschöpfen.',
+    'about.founder1.badge1': 'AI Manager Zertifiziert',
+    'about.founder1.badge2': 'KI-Experte',
+    
+    'about.founder2.name': 'Dino Fetzer',
+    'about.founder2.role': 'Co-Founder & AI Manager',
+    'about.founder2.bio': 'Dino Fetzer, zertifizierter AI-Manager und Werbe-Filmregisseur, spezialisiert auf innovative KI-Automation und Content-Erstellung.',
+    'about.founder2.badge1': 'AI Manager Zertifiziert',
+    'about.founder2.badge2': 'Award Winning Director',
+    
     // Services Section
     'services.title': 'Unsere Services',
     'services.description': 'Wir bieten hochwertige KI-Automatisierungslösungen, die speziell auf die Bedürfnisse Ihres Unternehmens zugeschnitten sind.',
     
+    // Service 1
+    'services.service1.title': 'Prozess-Optimierung mit RPA',
+    'services.service1.description': 'Automatisieren Sie repetitive Aufgaben und Workflows mit Robotic Process Automation und steigern Sie Ihre Effizienz um bis zu 80%.',
+    'services.service1.feature1': 'Reduzierung manueller Eingaben',
+    'services.service1.feature2': 'Fehlerminimierung',
+    'services.service1.feature3': '24/7 Betrieb',
+    
+    // Service 2
+    'services.service2.title': 'Datenanalyse & Prognosen',
+    'services.service2.description': 'Nutzen Sie das volle Potenzial Ihrer Daten mit KI-gestützter Analytik und gewinnen Sie wertvolle Erkenntnisse für fundierte Geschäftsentscheidungen.',
+    'services.service2.feature1': 'Predictive Analytics',
+    'services.service2.feature2': 'Automatisierte Berichterstellung',
+    'services.service2.feature3': 'Visualisierung komplexer Datensätze',
+    
+    // Service 3
+    'services.service3.title': 'Chatbots & Virtuelle Assistenten',
+    'services.service3.description': 'Verbessern Sie Ihren Kundenservice mit intelligenten Chatbots, die rund um die Uhr Anfragen bearbeiten und Ihre Teams entlasten können.',
+    'services.service3.feature1': 'Natürliche Sprachverarbeitung',
+    'services.service3.feature2': 'Nahtlose Integration in bestehende Systeme',
+    'services.service3.feature3': 'Kontinuierliches Lernen und Verbessern',
+    
+    // Service 4
+    'services.service4.title': 'Maßgeschneiderte KI-Lösungen',
+    'services.service4.description': 'Wir entwickeln individuelle KI-Anwendungen, die genau auf Ihre Geschäftsprozesse und Anforderungen zugeschnitten sind.',
+    'services.service4.feature1': 'Bedarfsanalyse & Konzeptentwicklung',
+    'services.service4.feature2': 'Implementierung & Integration',
+    'services.service4.feature3': 'Kontinuierliche Optimierung',
+    
     // Case Studies Section
     'caseStudies.title': 'Erfolgsgeschichten',
     'caseStudies.description': 'Entdecken Sie, wie wir anderen Unternehmen geholfen haben, durch KI-Automatisierung Zeit und Ressourcen zu sparen und ihre Effizienz zu steigern.',
+    
+    // Case Study 1
+    'caseStudies.case1.title': 'Automatisierte Lieferkettenverwaltung für LogiTech GmbH',
+    'caseStudies.case1.description': 'Die Integration unserer KI-basierten Automatisierungslösung in die Lieferkettenverwaltung hat die Effizienz von LogiTech um 35% gesteigert und die Fehlerquote um 78% reduziert.',
+    'caseStudies.case1.industry': 'Logistikbranche',
+    'caseStudies.case1.type': 'Prozessautomatisierung',
+    'caseStudies.case1.result1': 'Implementierung eines KI-gestützten Routenoptimierungssystems',
+    'caseStudies.case1.result2': 'Automatisierung der Bestandsverwaltung mit Predictive Analytics',
+    'caseStudies.case1.result3': 'Reduzierung der Lieferzeit um 28%',
+    'caseStudies.case1.testimonial': 'Die KI-Lösung von Taylor Consulting hat unsere Lieferkette revolutioniert. Wir können nun viel präziser planen und schneller auf Veränderungen reagieren.',
+    'caseStudies.case1.author': 'Michael Berger, CIO',
+    
+    // Case Study 2
+    'caseStudies.case2.title': 'KI-gestützte Betrugserkennung für FinSecure AG',
+    'caseStudies.case2.description': 'Implementierung eines intelligenten Betrugserkennungssystems, das verdächtige Transaktionen in Echtzeit analysiert und potenzielle Betrugsfälle mit 97% Genauigkeit identifiziert.',
+    'caseStudies.case2.industry': 'Finanzsektor',
+    'caseStudies.case2.type': 'Datenanalyse',
+    'caseStudies.case2.result1': 'Entwicklung eines selbstlernenden Algorithmus zur Betrugserkennung',
+    'caseStudies.case2.result2': 'Reduzierung falscher Alarme um 82%',
+    'caseStudies.case2.result3': 'Einsparungen von ca. 2,4 Millionen Euro im ersten Jahr',
+    'caseStudies.case2.testimonial': 'Mit dem KI-System von Taylor Consulting konnten wir unsere Betrugserkennung auf ein neues Level heben und gleichzeitig den Aufwand für unsere Analysten deutlich reduzieren.',
+    'caseStudies.case2.author': 'Dr. Sabine Meier, Head of Risk Management',
     
     // Contact Section
     'contact.title': 'Kontakt',
@@ -101,9 +164,50 @@ const translations: Record<Language, Record<string, string>> = {
     'about.title': 'About us',
     'about.description': 'Taylor Consulting is your partner for intelligent process automation. We combine human expertise with cutting-edge AI technology to develop customized automation solutions for your business.',
     
+    // Founders
+    'about.founder1.name': 'Andreas Schneider',
+    'about.founder1.role': 'Co-Founder & AI Manager',
+    'about.founder1.bio': 'With over 10 years of experience in the technology industry, Andreas helps companies harness the full potential of AI technologies.',
+    'about.founder1.badge1': 'Certified AI Manager',
+    'about.founder1.badge2': 'AI Expert',
+    
+    'about.founder2.name': 'Dino Fetzer',
+    'about.founder2.role': 'Co-Founder & AI Manager',
+    'about.founder2.bio': 'Dino Fetzer, certified AI Manager and commercial film director, specializes in innovative AI automation and content creation.',
+    'about.founder2.badge1': 'Certified AI Manager',
+    'about.founder2.badge2': 'Award Winning Director',
+    
     // Services Section
     'services.title': 'Our Services',
     'services.description': 'We offer high-quality AI automation solutions specifically tailored to the needs of your company.',
+    
+    // Service 1
+    'services.service1.title': 'Process Optimization with RPA',
+    'services.service1.description': 'Automate repetitive tasks and workflows with Robotic Process Automation and increase your efficiency by up to 80%.',
+    'services.service1.feature1': 'Reduction of manual entries',
+    'services.service1.feature2': 'Error minimization',
+    'services.service1.feature3': '24/7 operation',
+    
+    // Service 2
+    'services.service2.title': 'Data Analysis & Forecasts',
+    'services.service2.description': 'Harness the full potential of your data with AI-powered analytics and gain valuable insights for informed business decisions.',
+    'services.service2.feature1': 'Predictive Analytics',
+    'services.service2.feature2': 'Automated reporting',
+    'services.service2.feature3': 'Visualization of complex datasets',
+    
+    // Service 3
+    'services.service3.title': 'Chatbots & Virtual Assistants',
+    'services.service3.description': 'Improve your customer service with intelligent chatbots that can handle inquiries around the clock and relieve your teams.',
+    'services.service3.feature1': 'Natural language processing',
+    'services.service3.feature2': 'Seamless integration into existing systems',
+    'services.service3.feature3': 'Continuous learning and improvement',
+    
+    // Service 4
+    'services.service4.title': 'Custom AI Solutions',
+    'services.service4.description': 'We develop individual AI applications that are precisely tailored to your business processes and requirements.',
+    'services.service4.feature1': 'Needs analysis & concept development',
+    'services.service4.feature2': 'Implementation & integration',
+    'services.service4.feature3': 'Continuous optimization',
     
     // Case Studies Section
     'caseStudies.title': 'Success Stories',
