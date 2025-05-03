@@ -19,6 +19,7 @@ import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin, Linkedin, Twitter } from "lucide-react";
 import { apiRequest } from "@/lib/queryClient";
+import { useLanguage } from "../contexts/LanguageContext";
 
 const contactFormSchema = z.object({
   name: z.string().min(2, "Name muss mindestens 2 Zeichen lang sein"),
@@ -37,6 +38,7 @@ export default function ContactSection() {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
   const { toast } = useToast();
+  const { t, language } = useLanguage();
 
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
@@ -81,10 +83,10 @@ export default function ContactSection() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Kontaktieren Sie uns</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('contact.title')}</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
           <p className="max-w-3xl mx-auto text-gray-600">
-            Bereit, Ihr Unternehmen mit KI-Automatisierung auf die nächste Stufe zu bringen? Kontaktieren Sie uns für eine unverbindliche Beratung.
+            {t('contact.description')}
           </p>
         </motion.div>
 
@@ -97,14 +99,14 @@ export default function ContactSection() {
                 animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
               >
-                <h3 className="text-lg font-bold mb-4">Kontaktinformationen</h3>
+                <h3 className="text-lg font-bold mb-4">{t('contact.contactInfo')}</h3>
                 <div className="space-y-4">
                   <div className="flex items-start">
                     <div className="text-primary mr-4">
                       <Mail className="h-6 w-6" />
                     </div>
                     <div>
-                      <p className="font-semibold text-secondary">E-Mail</p>
+                      <p className="font-semibold text-secondary">{t('contact.email')}</p>
                       <a href="mailto:info@taylor-consulting.de" className="text-primary hover:underline">
                         info@taylor-consulting.de
                       </a>
@@ -116,7 +118,7 @@ export default function ContactSection() {
                       <Phone className="h-6 w-6" />
                     </div>
                     <div>
-                      <p className="font-semibold text-secondary">Telefon</p>
+                      <p className="font-semibold text-secondary">{t('contact.phone')}</p>
                       <a href="tel:+4989123456789" className="text-primary hover:underline">
                         +49 (0) 89 123 456 789
                       </a>
@@ -128,11 +130,11 @@ export default function ContactSection() {
                       <MapPin className="h-6 w-6" />
                     </div>
                     <div>
-                      <p className="font-semibold text-secondary">Adresse</p>
+                      <p className="font-semibold text-secondary">{t('contact.address')}</p>
                       <p className="text-gray-600">
                         Innovationsstraße 42<br />
                         80331 München<br />
-                        Deutschland
+                        {t('contact.country')}
                       </p>
                     </div>
                   </div>
@@ -145,7 +147,7 @@ export default function ContactSection() {
                 animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <h3 className="text-lg font-bold mb-4">Folgen Sie uns</h3>
+                <h3 className="text-lg font-bold mb-4">{t('contact.followUs')}</h3>
                 <div className="flex space-x-4">
                   <a 
                     href="#" 
@@ -171,7 +173,7 @@ export default function ContactSection() {
               animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <h3 className="text-xl font-bold mb-6">Kontaktformular</h3>
+              <h3 className="text-xl font-bold mb-6">{t('contact.contactForm')}</h3>
               
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -181,9 +183,9 @@ export default function ContactSection() {
                       name="name"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Name *</FormLabel>
+                          <FormLabel>{t('contact.form.name')} *</FormLabel>
                           <FormControl>
-                            <Input placeholder="Ihr Name" {...field} />
+                            <Input placeholder={t('contact.form.namePlaceholder')} {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -195,9 +197,9 @@ export default function ContactSection() {
                       name="email"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>E-Mail *</FormLabel>
+                          <FormLabel>{t('contact.form.email')} *</FormLabel>
                           <FormControl>
-                            <Input placeholder="ihre.email@beispiel.de" {...field} />
+                            <Input placeholder={t('contact.form.emailPlaceholder')} {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -210,9 +212,9 @@ export default function ContactSection() {
                     name="subject"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Betreff</FormLabel>
+                        <FormLabel>{t('contact.form.subject')}</FormLabel>
                         <FormControl>
-                          <Input placeholder="Worum geht es?" {...field} />
+                          <Input placeholder={t('contact.form.subjectPlaceholder')} {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -224,10 +226,10 @@ export default function ContactSection() {
                     name="message"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Nachricht *</FormLabel>
+                        <FormLabel>{t('contact.form.message')} *</FormLabel>
                         <FormControl>
                           <Textarea 
-                            placeholder="Wie können wir Ihnen helfen?" 
+                            placeholder={t('contact.form.messagePlaceholder')} 
                             rows={5} 
                             {...field} 
                           />
