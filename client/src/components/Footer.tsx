@@ -7,10 +7,10 @@ export default function Footer() {
   return (
     <footer className="bg-secondary text-white pt-12 pb-8">
       <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
+        <div className="grid md:grid-cols-4 gap-12 mb-8">
           <div className="md:col-span-1">
             <h3 className="text-xl font-bold mb-4">Taylor Consulting</h3>
-            <p className="text-gray-400 mb-4 max-w-[220px]">
+            <p className="text-gray-400 mb-4 max-w-[180px]">
               Ihr Partner für maßgeschneiderte KI-Automatisierungslösungen. Wir helfen Ihnen, Ihre Prozesse zu optimieren und Ressourcen effizient einzusetzen.
             </p>
           </div>
