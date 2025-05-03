@@ -5,18 +5,18 @@ export default function LanguageSwitcher() {
   const { language, setLanguage } = useLanguage();
 
   return (
-    <div className="flex items-center space-x-2">
+    <div className="flex items-center border border-gray-600 rounded-md overflow-hidden">
       <button 
         onClick={() => setLanguage('de')}
-        className={`text-sm px-2 py-1 rounded ${language === 'de' ? 'bg-primary text-white' : 'text-white hover:text-primary'}`}
+        className={`text-sm px-3 py-1 transition-colors ${language === 'de' ? 'bg-primary text-white' : 'text-white hover:text-primary hover:bg-gray-800'}`}
         aria-label="Switch to German"
       >
         DE
       </button>
-      <span className="text-gray-400">|</span>
+      <div className="w-px h-4 bg-gray-600"></div>
       <button 
         onClick={() => setLanguage('en')}
-        className={`text-sm px-2 py-1 rounded ${language === 'en' ? 'bg-primary text-white' : 'text-white hover:text-primary'}`}
+        className={`text-sm px-3 py-1 transition-colors ${language === 'en' ? 'bg-primary text-white' : 'text-white hover:text-primary hover:bg-gray-800'}`}
         aria-label="Switch to English"
       >
         EN

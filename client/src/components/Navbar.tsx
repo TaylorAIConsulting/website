@@ -35,31 +35,34 @@ export default function Navbar({ isScrolled, mobileMenuOpen, toggleMobileMenu, s
             Taylor <span className="text-primary">Consulting</span>
           </Link>
           
-          <div className="lg:hidden">
-            <button 
-              id="menu-toggle" 
-              className="text-white focus:outline-none"
-              onClick={toggleMobileMenu}
-              aria-label="Toggle mobile menu"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-          </div>
-          
-          <nav className="hidden lg:flex items-center space-x-10">
-            {navLinks.map((link) => (
-              <a 
-                key={link.href}
-                href={link.href} 
-                className="text-white hover:text-primary transition duration-300"
-              >
-                {link.label}
-              </a>
-            ))}
+          <div className="flex items-center space-x-6">
             <LanguageSwitcher />
-          </nav>
+            
+            <div className="lg:hidden ml-2">
+              <button 
+                id="menu-toggle" 
+                className="text-white focus:outline-none"
+                onClick={toggleMobileMenu}
+                aria-label="Toggle mobile menu"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+            </div>
+            
+            <nav className="hidden lg:flex items-center space-x-10">
+              {navLinks.map((link) => (
+                <a 
+                  key={link.href}
+                  href={link.href} 
+                  className="text-white hover:text-primary transition duration-300"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </nav>
+          </div>
         </div>
       </div>
       
@@ -75,9 +78,6 @@ export default function Navbar({ isScrolled, mobileMenuOpen, toggleMobileMenu, s
               {link.label}
             </a>
           ))}
-          <div className="pt-4 mt-2 border-t border-gray-700">
-            <LanguageSwitcher />
-          </div>
         </div>
       </div>
     </header>
