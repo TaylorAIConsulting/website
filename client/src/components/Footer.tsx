@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div className="md:col-span-1">
             <h3 className="text-xl font-bold mb-4">Taylor Consulting</h3>
-            <p className="text-gray-400 mb-4">
+            <p className="text-gray-400 mb-4 max-w-[220px]">
               Ihr Partner für maßgeschneiderte KI-Automatisierungslösungen. Wir helfen Ihnen, Ihre Prozesse zu optimieren und Ressourcen effizient einzusetzen.
             </p>
           </div>
