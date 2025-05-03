@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useLanguage } from "../contexts/LanguageContext";
 
 interface HeroProps {
   data?: {
@@ -8,8 +9,9 @@ interface HeroProps {
 }
 
 export default function HeroSection({ data }: HeroProps) {
-  const headline = data?.headline || "AI-Automatisierungen für Ihr Unternehmen";
-  const subline = data?.subline || "Maßgeschneiderte KI-Lösungen, die Ihre Prozesse optimieren und Ihr Geschäft auf die nächste Stufe bringen.";
+  const { t } = useLanguage();
+  const headline = data?.headline || t('hero.headline');
+  const subline = data?.subline || t('hero.subline');
 
   return (
     <section id="home" className="section relative min-h-screen flex items-center bg-gradient-hero text-white">
@@ -45,7 +47,7 @@ export default function HeroSection({ data }: HeroProps) {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Jetzt Beratung anfragen
+              {t('hero.cta')}
             </motion.a>
             <motion.a 
               href="#services" 
@@ -53,7 +55,7 @@ export default function HeroSection({ data }: HeroProps) {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Services entdecken
+              {t('hero.services')}
             </motion.a>
           </div>
         </motion.div>

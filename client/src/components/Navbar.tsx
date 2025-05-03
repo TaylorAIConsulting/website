@@ -1,4 +1,6 @@
 import { Link } from "wouter";
+import { useLanguage } from "../contexts/LanguageContext";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 interface NavbarProps {
   isScrolled: boolean;
@@ -8,12 +10,14 @@ interface NavbarProps {
 }
 
 export default function Navbar({ isScrolled, mobileMenuOpen, toggleMobileMenu, setMobileMenuOpen }: NavbarProps) {
+  const { t } = useLanguage();
+  
   const navLinks = [
-    { href: "#home", label: "Home" },
-    { href: "#about", label: "Über uns" },
-    { href: "#services", label: "Services" },
-    { href: "#case-studies", label: "Referenzen" },
-    { href: "#contact", label: "Kontakt" },
+    { href: "#home", label: t('nav.home') },
+    { href: "#about", label: t('nav.about') },
+    { href: "#services", label: t('nav.services') },
+    { href: "#case-studies", label: t('nav.caseStudies') },
+    { href: "#contact", label: t('nav.contact') },
   ];
 
   const handleNavLinkClick = () => {
@@ -44,7 +48,7 @@ export default function Navbar({ isScrolled, mobileMenuOpen, toggleMobileMenu, s
             </button>
           </div>
           
-          <nav className="hidden lg:flex space-x-10">
+          <nav className="hidden lg:flex items-center space-x-10">
             {navLinks.map((link) => (
               <a 
                 key={link.href}
@@ -54,6 +58,7 @@ export default function Navbar({ isScrolled, mobileMenuOpen, toggleMobileMenu, s
                 {link.label}
               </a>
             ))}
+            <LanguageSwitcher />
           </nav>
         </div>
       </div>
@@ -70,6 +75,9 @@ export default function Navbar({ isScrolled, mobileMenuOpen, toggleMobileMenu, s
               {link.label}
             </a>
           ))}
+          <div className="pt-4 mt-2 border-t border-gray-700">
+            <LanguageSwitcher />
+          </div>
         </div>
       </div>
     </header>
