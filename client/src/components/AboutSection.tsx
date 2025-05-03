@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import { useLanguage } from "../contexts/LanguageContext";
 
 interface FounderProps {
   name: string;
@@ -70,6 +71,7 @@ function FounderCard({ founder }: { founder: FounderProps }) {
 }
 
 export default function AboutSection({ data = defaultFounders }: AboutSectionProps) {
+  const { t } = useLanguage();
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
 
@@ -82,10 +84,10 @@ export default function AboutSection({ data = defaultFounders }: AboutSectionPro
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Über uns</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('about.title')}</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
           <p className="max-w-3xl mx-auto text-gray-600">
-            Taylor Consulting ist Ihr Partner für intelligente Prozessautomatisierung. Wir verbinden menschliche Expertise mit modernster KI-Technologie, um für Ihr Unternehmen maßgeschneiderte Automatisierungslösungen zu entwickeln.
+            {t('about.description')}
           </p>
         </motion.div>
 

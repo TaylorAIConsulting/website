@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { CheckCircle2 } from "lucide-react";
+import { useLanguage } from "../contexts/LanguageContext";
 
 interface CaseStudyResult {
   text: string;
@@ -119,6 +120,7 @@ function CaseStudyCard({ caseStudy, index }: { caseStudy: CaseStudyProps, index:
 }
 
 export default function CaseStudiesSection({ data = defaultCaseStudies }: CaseStudiesSectionProps) {
+  const { t } = useLanguage();
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
 
@@ -131,10 +133,10 @@ export default function CaseStudiesSection({ data = defaultCaseStudies }: CaseSt
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Erfolgsgeschichten</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('caseStudies.title')}</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
           <p className="max-w-3xl mx-auto text-gray-300">
-            Entdecken Sie, wie wir anderen Unternehmen geholfen haben, durch KI-Automatisierung Zeit und Ressourcen zu sparen und ihre Effizienz zu steigern.
+            {t('caseStudies.description')}
           </p>
         </motion.div>
 

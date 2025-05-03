@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { CheckCircle2 } from "lucide-react";
+import { useLanguage } from "../contexts/LanguageContext";
 
 interface ServiceFeature {
   text: string;
@@ -127,6 +128,7 @@ function ServiceCard({ service, index }: { service: ServiceProps, index: number 
 }
 
 export default function ServicesSection({ data = defaultServices }: ServicesSectionProps) {
+  const { t } = useLanguage();
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
 
@@ -139,10 +141,10 @@ export default function ServicesSection({ data = defaultServices }: ServicesSect
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Unsere Services</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('services.title')}</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
           <p className="max-w-3xl mx-auto text-gray-600">
-            Wir bieten eine Reihe von KI-gestützten Automatisierungslösungen, die speziell auf die Bedürfnisse Ihres Unternehmens zugeschnitten sind.
+            {t('services.description')}
           </p>
         </motion.div>
 
