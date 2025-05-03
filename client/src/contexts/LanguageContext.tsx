@@ -38,11 +38,33 @@ const translations: Record<Language, Record<string, string>> = {
     // Contact Section
     'contact.title': 'Kontakt',
     'contact.description': 'Bereit, Ihre Prozesse zu optimieren? Kontaktieren Sie uns für eine unverbindliche Beratung.',
-    'contact.namePlaceholder': 'Ihr Name',
-    'contact.emailPlaceholder': 'Ihre E-Mail',
-    'contact.messagePlaceholder': 'Ihre Nachricht',
-    'contact.submit': 'Nachricht senden',
-    'contact.success': 'Vielen Dank für Ihre Nachricht. Wir werden uns in Kürze bei Ihnen melden.',
+    'contact.contactInfo': 'Kontaktinformationen',
+    'contact.email': 'E-Mail',
+    'contact.phone': 'Telefon',
+    'contact.address': 'Adresse',
+    'contact.country': 'Deutschland',
+    'contact.followUs': 'Folgen Sie uns',
+    'contact.contactForm': 'Kontaktformular',
+    
+    // Contact Form
+    'contact.form.name': 'Name',
+    'contact.form.namePlaceholder': 'Ihr Name',
+    'contact.form.email': 'E-Mail',
+    'contact.form.emailPlaceholder': 'ihre.email@beispiel.de',
+    'contact.form.subject': 'Betreff',
+    'contact.form.subjectPlaceholder': 'Worum geht es?',
+    'contact.form.message': 'Nachricht',
+    'contact.form.messagePlaceholder': 'Wie können wir Ihnen helfen?',
+    'contact.form.acceptPolicy': 'Ich akzeptiere die',
+    'contact.form.privacyPolicy': 'Datenschutzbestimmungen',
+    'contact.form.send': 'Nachricht senden',
+    'contact.form.sending': 'Wird gesendet...',
+    
+    // Contact Toast Messages
+    'contact.toast.successTitle': 'Nachricht gesendet!',
+    'contact.toast.successDescription': 'Vielen Dank für Ihre Nachricht. Wir werden uns in Kürze bei Ihnen melden.',
+    'contact.toast.errorTitle': 'Fehler beim Senden',
+    'contact.toast.errorDescription': 'Es gab ein Problem beim Senden Ihrer Nachricht. Bitte versuchen Sie es später erneut.',
     
     // Footer
     'footer.company': 'Taylor Consulting',
@@ -84,11 +106,33 @@ const translations: Record<Language, Record<string, string>> = {
     // Contact Section
     'contact.title': 'Contact',
     'contact.description': 'Ready to optimize your processes? Contact us for a non-binding consultation.',
-    'contact.namePlaceholder': 'Your Name',
-    'contact.emailPlaceholder': 'Your Email',
-    'contact.messagePlaceholder': 'Your Message',
-    'contact.submit': 'Send Message',
-    'contact.success': 'Thank you for your message. We will get back to you shortly.',
+    'contact.contactInfo': 'Contact Information',
+    'contact.email': 'Email',
+    'contact.phone': 'Phone',
+    'contact.address': 'Address',
+    'contact.country': 'Germany',
+    'contact.followUs': 'Follow Us',
+    'contact.contactForm': 'Contact Form',
+    
+    // Contact Form
+    'contact.form.name': 'Name',
+    'contact.form.namePlaceholder': 'Your Name',
+    'contact.form.email': 'Email',
+    'contact.form.emailPlaceholder': 'your.email@example.com',
+    'contact.form.subject': 'Subject',
+    'contact.form.subjectPlaceholder': 'What is it about?',
+    'contact.form.message': 'Message',
+    'contact.form.messagePlaceholder': 'How can we help you?',
+    'contact.form.acceptPolicy': 'I accept the',
+    'contact.form.privacyPolicy': 'Privacy Policy',
+    'contact.form.send': 'Send Message',
+    'contact.form.sending': 'Sending...',
+    
+    // Contact Toast Messages
+    'contact.toast.successTitle': 'Message Sent!',
+    'contact.toast.successDescription': 'Thank you for your message. We will get back to you shortly.',
+    'contact.toast.errorTitle': 'Error Sending Message',
+    'contact.toast.errorDescription': 'There was a problem sending your message. Please try again later.',
     
     // Footer
     'footer.company': 'Taylor Consulting',

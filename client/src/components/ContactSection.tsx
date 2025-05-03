@@ -21,17 +21,17 @@ import { Mail, Phone, MapPin, Linkedin, Twitter } from "lucide-react";
 import { apiRequest } from "@/lib/queryClient";
 import { useLanguage } from "../contexts/LanguageContext";
 
-const contactFormSchema = z.object({
-  name: z.string().min(2, "Name muss mindestens 2 Zeichen lang sein"),
-  email: z.string().email("Bitte geben Sie eine gültige E-Mail-Adresse ein"),
+const contactFormSchema = (t: (key: string) => string) => z.object({
+  name: z.string().min(2, t('contact.validation.nameLength')),
+  email: z.string().email(t('contact.validation.emailValid')),
   subject: z.string().optional(),
-  message: z.string().min(10, "Nachricht muss mindestens 10 Zeichen lang sein"),
+  message: z.string().min(10, t('contact.validation.messageLength')),
   acceptPolicy: z.literal(true, {
-    errorMap: () => ({ message: "Sie müssen die Datenschutzbestimmungen akzeptieren" }),
+    errorMap: () => ({ message: t('contact.validation.acceptPolicy') }),
   }),
 });
 
-type ContactFormValues = z.infer<typeof contactFormSchema>;
+type ContactFormValues = z.infer<ReturnType<typeof contactFormSchema>>;
 
 export default function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -57,16 +57,16 @@ export default function ContactSection() {
       await apiRequest("POST", "/api/contact", data);
       
       toast({
-        title: "Nachricht gesendet!",
-        description: "Vielen Dank für Ihre Nachricht. Wir werden uns in Kürze bei Ihnen melden.",
+        title: t('contact.toast.successTitle'),
+        description: t('contact.toast.successDescription'),
         variant: "default",
       });
       
       form.reset();
     } catch (error) {
       toast({
-        title: "Fehler beim Senden",
-        description: "Es gab ein Problem beim Senden Ihrer Nachricht. Bitte versuchen Sie es später erneut.",
+        title: t('contact.toast.errorTitle'),
+        description: t('contact.toast.errorDescription'),
         variant: "destructive",
       });
     } finally {
@@ -252,7 +252,7 @@ export default function ContactSection() {
                         </FormControl>
                         <div className="space-y-1 leading-none">
                           <FormLabel className="text-sm text-gray-600">
-                            Ich akzeptiere die <a href="#" className="text-primary hover:underline">Datenschutzbestimmungen</a> *
+                            {t('contact.form.acceptPolicy')} <a href="#" className="text-primary hover:underline">{t('contact.form.privacyPolicy')}</a> *
                           </FormLabel>
                           <FormMessage />
                         </div>
@@ -265,7 +265,7 @@ export default function ContactSection() {
                     className="w-full bg-primary hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 shadow" 
                     disabled={isSubmitting}
                   >
-                    {isSubmitting ? "Wird gesendet..." : "Nachricht senden"}
+                    {isSubmitting ? t('contact.form.sending') : t('contact.form.send')}
                   </Button>
                 </form>
               </Form>
