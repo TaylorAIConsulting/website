@@ -1,11 +1,21 @@
 import { useLanguage } from "../contexts/LanguageContext";
 import { Container } from "../components/ui/container";
+import { Link } from "wouter";
 
 export default function Impressum() {
   const { language } = useLanguage();
   
   return (
     <Container className="py-12">
+      <div className="flex items-center mb-8">
+        <Link href="/" className="inline-flex items-center px-4 py-2 bg-gray-200 dark:bg-gray-800 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
+          {language === 'de' ? 'Zurück zur Startseite' : 'Back to Home'}
+        </Link>
+      </div>
+      
       <div className="max-w-3xl mx-auto">
         <h1 className="text-3xl font-bold mb-8">{language === 'de' ? 'Impressum' : 'Imprint'}</h1>
         
