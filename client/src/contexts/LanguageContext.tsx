@@ -99,13 +99,13 @@ const translations: Record<Language, Record<string, string>> = {
     'caseStudies.case2.author': 'Dr. Sabine Meier, Head of Risk Management',
     
     // Case Study 3
-    'caseStudies.case3.title': 'KI-Avatar Entwicklung für Kazoom Media',
-    'caseStudies.case3.description': 'Entwicklung eines personalisierten KI-getriebenen Avatars mit natürlichen Sprach- und Mimikfähigkeiten, der als interaktiver Moderator für digitale Inhalte dient.',
-    'caseStudies.case3.industry': 'Unterhaltung & Medien',
-    'caseStudies.case3.type': 'KI-Personalisierung',
-    'caseStudies.case3.result1': 'Erschaffung eines fotorealistischen 3D-Avatars mit adaptiver Mimik und Gestik',
-    'caseStudies.case3.result2': 'Integration von KI-Sprachmodellen für natürliche Konversationen und personalisierte Interaktionen',
-    'caseStudies.case3.result3': 'Steigerung der Nutzerbindung um 68% gegenüber traditionellen Inhaltsformaten',
+    'caseStudies.case3.title': 'Digital Entertainment KI Prototyping',
+    'caseStudies.case3.description': 'Prototyping eines KI-Avatars. KI Charakter interagiert in Echtzeit und erhielt positives Feedback – ein klarer Beweis für die technische Machbarkeit.',
+    'caseStudies.case3.industry': 'Digital Entertainment',
+    'caseStudies.case3.type': 'KI Prototyping',
+    'caseStudies.case3.result1': 'Integration von NLP, GANs und Motion-Capture-Technologien',
+    'caseStudies.case3.result2': 'Plattformintegration auf Social Media',
+    'caseStudies.case3.result3': 'Erfassung von Nutzer-Feedback und erste Datenanalysen',
     'caseStudies.case3.testimonial': 'Der KI-Avatar hat unsere digitale Präsenz revolutioniert. Die Kombination aus menschenähnlicher Interaktion und KI-gestützter Personalisierung hat unsere Nutzerbindung auf ein neues Niveau gehoben.',
     'caseStudies.case3.author': 'Thomas Weber, Creative Director',
     
@@ -256,13 +256,13 @@ const translations: Record<Language, Record<string, string>> = {
     'caseStudies.case2.author': 'Dr. Sabine Meier, Head of Risk Management',
     
     // Case Study 3
-    'caseStudies.case3.title': 'AI Avatar Development for Kazoom Media',
-    'caseStudies.case3.description': 'Development of a personalized AI-driven avatar with natural speech and facial expression capabilities that serves as an interactive host for digital content.',
-    'caseStudies.case3.industry': 'Entertainment & Media',
-    'caseStudies.case3.type': 'AI Personalization',
-    'caseStudies.case3.result1': 'Creation of a photorealistic 3D avatar with adaptive facial expressions and gestures',
-    'caseStudies.case3.result2': 'Integration of AI language models for natural conversations and personalized interactions',
-    'caseStudies.case3.result3': 'Increase in user engagement by 68% compared to traditional content formats',
+    'caseStudies.case3.title': 'Digital Entertainment AI Prototyping',
+    'caseStudies.case3.description': 'Prototyping of an AI Avatar. AI character interacts in real-time and received positive feedback – a clear proof of technical feasibility.',
+    'caseStudies.case3.industry': 'Digital Entertainment',
+    'caseStudies.case3.type': 'AI Prototyping',
+    'caseStudies.case3.result1': 'Integration of NLP, GANs and motion capture technologies',
+    'caseStudies.case3.result2': 'Platform integration on social media',
+    'caseStudies.case3.result3': 'User feedback collection and initial data analysis',
     'caseStudies.case3.testimonial': 'The AI avatar has revolutionized our digital presence. The combination of human-like interaction and AI-powered personalization has elevated our user engagement to a new level.',
     'caseStudies.case3.author': 'Thomas Weber, Creative Director',
     
