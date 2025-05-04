@@ -66,7 +66,7 @@ function getTranslatedCaseStudies(t: (key: string) => string): CaseStudyProps[] 
       ],
       testimonial: t('caseStudies.case3.testimonial'),
       author: t('caseStudies.case3.author'),
-      image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      image: "/images/jamie_hunter.mp4"
     }
   ];
 };
@@ -85,12 +85,39 @@ function CaseStudyCard({ caseStudy, index }: { caseStudy: CaseStudyProps, index:
     >
       <div className="lg:flex">
         <div className="lg:w-1/3 relative">
-          <img 
-            className="h-64 lg:h-full w-full object-cover" 
-            src={caseStudy.image} 
-            alt={caseStudy.title} 
-            loading="lazy"
-          />
+          {caseStudy.image.endsWith('.mp4') ? (
+            <div className="h-64 lg:h-full w-full relative bg-black">
+              <div className="absolute inset-0 grid grid-cols-2">
+                <video 
+                  className="h-full w-full object-cover" 
+                  autoPlay 
+                  loop 
+                  muted
+                  playsInline
+                >
+                  <source src={caseStudy.image} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <video 
+                  className="h-full w-full object-cover" 
+                  autoPlay 
+                  loop 
+                  muted
+                  playsInline
+                >
+                  <source src={caseStudy.image} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+          ) : (
+            <img 
+              className="h-64 lg:h-full w-full object-cover" 
+              src={caseStudy.image} 
+              alt={caseStudy.title} 
+              loading="lazy"
+            />
+          )}
         </div>
         <div className="lg:w-2/3 p-8">
           <div className="flex flex-wrap items-center mb-4 gap-2">
