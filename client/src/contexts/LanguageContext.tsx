@@ -77,15 +77,15 @@ const translations: Record<Language, Record<string, string>> = {
     'caseStudies.description': 'Entdecken Sie, wie wir anderen Unternehmen geholfen haben, durch KI-Automatisierung Zeit und Ressourcen zu sparen und ihre Effizienz zu steigern.',
     
     // Case Study 1
-    'caseStudies.case1.title': 'Automatisierte Lieferkettenverwaltung für LogiTech GmbH',
-    'caseStudies.case1.description': 'Die Integration unserer KI-basierten Automatisierungslösung in die Lieferkettenverwaltung hat die Effizienz von LogiTech um 35% gesteigert und die Fehlerquote um 78% reduziert.',
-    'caseStudies.case1.industry': 'Logistikbranche',
-    'caseStudies.case1.type': 'Prozessautomatisierung',
-    'caseStudies.case1.result1': 'Implementierung eines KI-gestützten Routenoptimierungssystems',
-    'caseStudies.case1.result2': 'Automatisierung der Bestandsverwaltung mit Predictive Analytics',
-    'caseStudies.case1.result3': 'Reduzierung der Lieferzeit um 28%',
-    'caseStudies.case1.testimonial': 'Die KI-Lösung von Taylor Consulting hat unsere Lieferkette revolutioniert. Wir können nun viel präziser planen und schneller auf Veränderungen reagieren.',
-    'caseStudies.case1.author': 'Michael Berger, CIO',
+    'caseStudies.case1.title': 'Automatisierte Inhaltsverwaltung und Monetarisierung für Vice Media',
+    'caseStudies.case1.description': 'Durch die Integration unserer KI-gesteuerten Automatisierung und fortschrittlicher Datenanalyse haben wir den Vice-Medienkatalog effizient neu strukturiert, die Produktionsprozesse beschleunigt und eine innovative Monetarisierung ermöglicht.',
+    'caseStudies.case1.industry': 'Medienbranche',
+    'caseStudies.case1.type': 'KI-Automation & Datenanalyse',
+    'caseStudies.case1.result1': 'Implementierung einer KI-basierten Analyseplattform zur Echtzeit-Content-Optimierung',
+    'caseStudies.case1.result2': 'Automatisierte Katalogisierung und intelligente Inhaltsvorschläge mittels Machine Learning',
+    'caseStudies.case1.result3': 'Steigerung der Content-Monetarisierung um 42%',
+    'caseStudies.case1.testimonial': 'Die KI-Automationslösung von Taylor Consulting hat unsere Inhalte effizienter organisiert und neue Umsatzpotenziale erschlossen. Vice Media ist jetzt flexibler und erfolgreicher am Markt positioniert.',
+    'caseStudies.case1.author': 'Julia Kramer, Head of Digital Operations',
     
     // Case Study 2
     'caseStudies.case2.title': 'KI-gestützte Betrugserkennung für FinSecure AG',
@@ -223,15 +223,15 @@ const translations: Record<Language, Record<string, string>> = {
     'caseStudies.description': 'Discover how we have helped other companies save time and resources through AI automation and increase their efficiency.',
     
     // Case Study 1
-    'caseStudies.case1.title': 'Automated Supply Chain Management for LogiTech GmbH',
-    'caseStudies.case1.description': 'The integration of our AI-based automation solution into supply chain management increased LogiTech\'s efficiency by 35% and reduced the error rate by 78%.',
-    'caseStudies.case1.industry': 'Logistics Industry',
-    'caseStudies.case1.type': 'Process Automation',
-    'caseStudies.case1.result1': 'Implementation of an AI-powered route optimization system',
-    'caseStudies.case1.result2': 'Automation of inventory management with predictive analytics',
-    'caseStudies.case1.result3': 'Reduction of delivery time by 28%',
-    'caseStudies.case1.testimonial': 'The AI solution from Taylor Consulting has revolutionized our supply chain. We can now plan much more precisely and respond more quickly to changes.',
-    'caseStudies.case1.author': 'Michael Berger, CIO',
+    'caseStudies.case1.title': 'Automated Content Management and Monetization for Vice Media',
+    'caseStudies.case1.description': 'By integrating our AI-driven automation and advanced data analytics, we efficiently restructured the Vice media catalog, accelerated production processes, and enabled innovative monetization.',
+    'caseStudies.case1.industry': 'Media Industry',
+    'caseStudies.case1.type': 'AI Automation & Data Analysis',
+    'caseStudies.case1.result1': 'Implementation of an AI-based analytics platform for real-time content optimization',
+    'caseStudies.case1.result2': 'Automated cataloging and intelligent content suggestions using machine learning',
+    'caseStudies.case1.result3': 'Increased content monetization by 42%',
+    'caseStudies.case1.testimonial': 'The AI automation solution from Taylor Consulting has organized our content more efficiently and unlocked new revenue potential. Vice Media is now more flexibly and successfully positioned in the market.',
+    'caseStudies.case1.author': 'Julia Kramer, Head of Digital Operations',
     
     // Case Study 2
     'caseStudies.case2.title': 'AI-Powered Fraud Detection for FinSecure AG',
