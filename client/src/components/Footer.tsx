@@ -44,10 +44,10 @@ export default function Footer() {
               <li>{t('footer.address.city')}</li>
               <li>{t('footer.address.country')}</li>
               <li className="pt-2">
-                <a href="tel:+4989123456789" className="hover:text-primary transition duration-300">{t('footer.phone')}</a>
+                <a href="tel:+491722179436" className="hover:text-primary transition duration-300">{t('footer.phone')}</a>
               </li>
               <li>
-                <a href="mailto:info@taylor-consulting.de" className="hover:text-primary transition duration-300">{t('footer.email')}</a>
+                <a href="mailto:info@taylorconsulting.io" className="hover:text-primary transition duration-300">{t('footer.email')}</a>
               </li>
             </ul>
           </div>
