@@ -88,15 +88,15 @@ const translations: Record<Language, Record<string, string>> = {
     'caseStudies.case1.author': 'Julia Kramer, Head of Digital Operations',
     
     // Case Study 2
-    'caseStudies.case2.title': 'KI-gestützte Betrugserkennung für FinSecure AG',
-    'caseStudies.case2.description': 'Implementierung eines intelligenten Betrugserkennungssystems, das verdächtige Transaktionen in Echtzeit analysiert und potenzielle Betrugsfälle mit 97% Genauigkeit identifiziert.',
-    'caseStudies.case2.industry': 'Finanzsektor',
-    'caseStudies.case2.type': 'Datenanalyse',
-    'caseStudies.case2.result1': 'Entwicklung eines selbstlernenden Algorithmus zur Betrugserkennung',
-    'caseStudies.case2.result2': 'Reduzierung falscher Alarme um 82%',
-    'caseStudies.case2.result3': 'Einsparungen von ca. 2,4 Millionen Euro im ersten Jahr',
-    'caseStudies.case2.testimonial': 'Mit dem KI-System von Taylor Consulting konnten wir unsere Betrugserkennung auf ein neues Level heben und gleichzeitig den Aufwand für unsere Analysten deutlich reduzieren.',
-    'caseStudies.case2.author': 'Dr. Sabine Meier, Head of Risk Management',
+    'caseStudies.case2.title': 'KI-gestützte Festivaloptimierung',
+    'caseStudies.case2.description': 'Durch den Einsatz von KI-gestützter Automatisierung und datenbasierter Analyse haben wir das VFX Forum transformiert, indem wir die Festivalorganisation optimierten, die Programmplanung effizienter gestalteten und neue Monetarisierungsmöglichkeiten erschlossen.',
+    'caseStudies.case2.industry': 'Medien- & Kreativbranche',
+    'caseStudies.case2.type': 'Intelligente Automatisierung für das VFX Forum',
+    'caseStudies.case2.result1': 'Implementierung eines KI-gestützten Systems zur automatisierten Programmplanung',
+    'caseStudies.case2.result2': 'Einsatz von Datenanalyse zur Optimierung der Teilnehmererfahrung',
+    'caseStudies.case2.result3': 'Steigerung der Sponsoring-Einnahmen um 40%',
+    'caseStudies.case2.testimonial': 'Mit der KI-Lösung von Taylor Consulting konnten wir unser Festival effizienter organisieren und gleichzeitig ein besseres Erlebnis für alle Teilnehmer bieten.',
+    'caseStudies.case2.author': 'Martin Kramer, Festivalleiter VFX Forum',
     
     // Case Study 3
     'caseStudies.case3.title': 'Digital Entertainment KI Prototyping',
@@ -245,15 +245,15 @@ const translations: Record<Language, Record<string, string>> = {
     'caseStudies.case1.author': 'Julia Kramer, Head of Digital Operations',
     
     // Case Study 2
-    'caseStudies.case2.title': 'AI-Powered Fraud Detection for FinSecure AG',
-    'caseStudies.case2.description': 'Implementation of an intelligent fraud detection system that analyzes suspicious transactions in real-time and identifies potential fraud cases with 97% accuracy.',
-    'caseStudies.case2.industry': 'Financial Sector',
-    'caseStudies.case2.type': 'Data Analysis',
-    'caseStudies.case2.result1': 'Development of a self-learning algorithm for fraud detection',
-    'caseStudies.case2.result2': 'Reduction of false alarms by 82%',
-    'caseStudies.case2.result3': 'Savings of approx. 2.4 million euros in the first year',
-    'caseStudies.case2.testimonial': 'With Taylor Consulting\'s AI system, we were able to take our fraud detection to a new level while significantly reducing the workload for our analysts.',
-    'caseStudies.case2.author': 'Dr. Sabine Meier, Head of Risk Management',
+    'caseStudies.case2.title': 'AI-Powered Festival Optimization',
+    'caseStudies.case2.description': 'By employing AI-driven automation and data-based analysis, we transformed the VFX Forum by optimizing festival organization, making program planning more efficient, and unlocking new monetization opportunities.',
+    'caseStudies.case2.industry': 'Media & Creative Industry',
+    'caseStudies.case2.type': 'Intelligent Automation for VFX Forum',
+    'caseStudies.case2.result1': 'Implementation of an AI-powered system for automated program planning',
+    'caseStudies.case2.result2': 'Use of data analysis to optimize participant experience',
+    'caseStudies.case2.result3': 'Increase in sponsorship revenue by 40%',
+    'caseStudies.case2.testimonial': 'With Taylor Consulting\'s AI solution, we were able to organize our festival more efficiently while providing a better experience for all participants.',
+    'caseStudies.case2.author': 'Martin Kramer, Festival Director VFX Forum',
     
     // Case Study 3
     'caseStudies.case3.title': 'Digital Entertainment AI Prototyping',
