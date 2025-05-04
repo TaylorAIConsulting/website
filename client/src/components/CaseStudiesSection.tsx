@@ -86,8 +86,9 @@ function CaseStudyCard({ caseStudy, index }: { caseStudy: CaseStudyProps, index:
       <div className="lg:flex">
         <div className="lg:w-1/3 relative">
           {caseStudy.image.endsWith('.mp4') ? (
-            <div className="h-64 lg:h-full w-full relative bg-black">
-              <div className="absolute inset-0 grid grid-cols-2">
+            <div className="h-64 lg:h-auto w-full bg-black overflow-hidden">
+              {/* Desktop - 2 Videos nebeneinander */}
+              <div className="hidden lg:grid grid-cols-2 gap-0 h-full">
                 <video 
                   className="h-full w-full object-cover" 
                   autoPlay 
@@ -98,6 +99,20 @@ function CaseStudyCard({ caseStudy, index }: { caseStudy: CaseStudyProps, index:
                   <source src={caseStudy.image} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
+                <video 
+                  className="h-full w-full object-cover" 
+                  autoPlay 
+                  loop 
+                  muted
+                  playsInline
+                >
+                  <source src={caseStudy.image} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              
+              {/* Mobile - 1 Video */}
+              <div className="lg:hidden h-full">
                 <video 
                   className="h-full w-full object-cover" 
                   autoPlay 
