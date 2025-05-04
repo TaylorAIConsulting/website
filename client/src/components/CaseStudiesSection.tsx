@@ -86,11 +86,11 @@ function CaseStudyCard({ caseStudy, index }: { caseStudy: CaseStudyProps, index:
       <div className="lg:flex">
         <div className="lg:w-1/3 relative">
           {caseStudy.image.endsWith('.mp4') ? (
-            <div className="h-64 lg:h-auto w-full bg-black overflow-hidden">
-              {/* Desktop - 2 Videos nebeneinander */}
-              <div className="hidden lg:grid grid-cols-2 gap-0 h-full">
+            <div className="w-full bg-black overflow-hidden" style={{ height: '250px' }}>
+              {/* Desktop - 3 Videos nebeneinander */}
+              <div className="hidden lg:grid grid-cols-3 gap-0 h-full">
                 <video 
-                  className="h-full w-full object-cover" 
+                  className="h-full w-full object-contain" 
                   autoPlay 
                   loop 
                   muted
@@ -100,7 +100,17 @@ function CaseStudyCard({ caseStudy, index }: { caseStudy: CaseStudyProps, index:
                   Your browser does not support the video tag.
                 </video>
                 <video 
-                  className="h-full w-full object-cover" 
+                  className="h-full w-full object-contain" 
+                  autoPlay 
+                  loop 
+                  muted
+                  playsInline
+                >
+                  <source src={caseStudy.image} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <video 
+                  className="h-full w-full object-contain" 
                   autoPlay 
                   loop 
                   muted
@@ -114,7 +124,7 @@ function CaseStudyCard({ caseStudy, index }: { caseStudy: CaseStudyProps, index:
               {/* Mobile - 1 Video */}
               <div className="lg:hidden h-full">
                 <video 
-                  className="h-full w-full object-cover" 
+                  className="h-full w-full object-contain" 
                   autoPlay 
                   loop 
                   muted
