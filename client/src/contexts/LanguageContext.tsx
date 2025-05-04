@@ -98,6 +98,17 @@ const translations: Record<Language, Record<string, string>> = {
     'caseStudies.case2.testimonial': 'Mit dem KI-System von Taylor Consulting konnten wir unsere Betrugserkennung auf ein neues Level heben und gleichzeitig den Aufwand für unsere Analysten deutlich reduzieren.',
     'caseStudies.case2.author': 'Dr. Sabine Meier, Head of Risk Management',
     
+    // Case Study 3
+    'caseStudies.case3.title': 'KI-Avatar Entwicklung für Kazoom Media',
+    'caseStudies.case3.description': 'Entwicklung eines personalisierten KI-getriebenen Avatars mit natürlichen Sprach- und Mimikfähigkeiten, der als interaktiver Moderator für digitale Inhalte dient.',
+    'caseStudies.case3.industry': 'Unterhaltung & Medien',
+    'caseStudies.case3.type': 'KI-Personalisierung',
+    'caseStudies.case3.result1': 'Erschaffung eines fotorealistischen 3D-Avatars mit adaptiver Mimik und Gestik',
+    'caseStudies.case3.result2': 'Integration von KI-Sprachmodellen für natürliche Konversationen und personalisierte Interaktionen',
+    'caseStudies.case3.result3': 'Steigerung der Nutzerbindung um 68% gegenüber traditionellen Inhaltsformaten',
+    'caseStudies.case3.testimonial': 'Der KI-Avatar hat unsere digitale Präsenz revolutioniert. Die Kombination aus menschenähnlicher Interaktion und KI-gestützter Personalisierung hat unsere Nutzerbindung auf ein neues Niveau gehoben.',
+    'caseStudies.case3.author': 'Thomas Weber, Creative Director',
+    
     // Contact Section
     'contact.title': 'Kontakt',
     'contact.description': 'Bereit, Ihre Prozesse zu optimieren? Kontaktieren Sie uns für eine unverbindliche Beratung.',
@@ -243,6 +254,17 @@ const translations: Record<Language, Record<string, string>> = {
     'caseStudies.case2.result3': 'Savings of approx. 2.4 million euros in the first year',
     'caseStudies.case2.testimonial': 'With Taylor Consulting\'s AI system, we were able to take our fraud detection to a new level while significantly reducing the workload for our analysts.',
     'caseStudies.case2.author': 'Dr. Sabine Meier, Head of Risk Management',
+    
+    // Case Study 3
+    'caseStudies.case3.title': 'AI Avatar Development for Kazoom Media',
+    'caseStudies.case3.description': 'Development of a personalized AI-driven avatar with natural speech and facial expression capabilities that serves as an interactive host for digital content.',
+    'caseStudies.case3.industry': 'Entertainment & Media',
+    'caseStudies.case3.type': 'AI Personalization',
+    'caseStudies.case3.result1': 'Creation of a photorealistic 3D avatar with adaptive facial expressions and gestures',
+    'caseStudies.case3.result2': 'Integration of AI language models for natural conversations and personalized interactions',
+    'caseStudies.case3.result3': 'Increase in user engagement by 68% compared to traditional content formats',
+    'caseStudies.case3.testimonial': 'The AI avatar has revolutionized our digital presence. The combination of human-like interaction and AI-powered personalization has elevated our user engagement to a new level.',
+    'caseStudies.case3.author': 'Thomas Weber, Creative Director',
     
     // Contact Section
     'contact.title': 'Contact',

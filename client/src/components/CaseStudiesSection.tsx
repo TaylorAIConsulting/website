@@ -53,6 +53,20 @@ function getTranslatedCaseStudies(t: (key: string) => string): CaseStudyProps[] 
       testimonial: t('caseStudies.case2.testimonial'),
       author: t('caseStudies.case2.author'),
       image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      title: t('caseStudies.case3.title'),
+      description: t('caseStudies.case3.description'),
+      industry: t('caseStudies.case3.industry'),
+      type: t('caseStudies.case3.type'),
+      results: [
+        { text: t('caseStudies.case3.result1') },
+        { text: t('caseStudies.case3.result2') },
+        { text: t('caseStudies.case3.result3') }
+      ],
+      testimonial: t('caseStudies.case3.testimonial'),
+      author: t('caseStudies.case3.author'),
+      image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
     }
   ];
 };
