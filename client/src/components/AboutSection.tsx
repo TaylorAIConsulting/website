@@ -23,7 +23,7 @@ function getTranslatedFounders(t: (key: string) => string): FounderProps[] {
       role: t('about.founder1.role'),
       bio: t('about.founder1.bio'),
       badges: [t('about.founder1.badge1'), t('about.founder1.badge2')],
-      image: "/images/andreas_schneider_white_bg.png"
+      image: "/andreas_schneider_white.png"
     },
     {
       name: t('about.founder2.name'),
