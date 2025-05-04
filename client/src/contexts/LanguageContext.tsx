@@ -159,11 +159,11 @@ const translations: Record<Language, Record<string, string>> = {
     'footer.privacy': 'Datenschutz',
     'footer.terms': 'AGB',
     'footer.contact': 'Kontakt',
-    'footer.address.street': 'Innovationsstraße 42',
-    'footer.address.city': '80331 München',
+    'footer.address.street': 'Rheinsberger Straße 71',
+    'footer.address.city': '10115 Berlin',
     'footer.address.country': 'Deutschland',
-    'footer.phone': '+49 (0) 89 123 456 789',
-    'footer.email': 'info@taylor-consulting.de',
+    'footer.phone': '+49 (0) 172 2179436',
+    'footer.email': 'info@taylorconsulting.io',
     'footer.copyright': 'Alle Rechte vorbehalten.'
   },
   en: {
@@ -316,11 +316,11 @@ const translations: Record<Language, Record<string, string>> = {
     'footer.privacy': 'Privacy Policy',
     'footer.terms': 'Terms & Conditions',
     'footer.contact': 'Contact',
-    'footer.address.street': 'Innovation Street 42',
-    'footer.address.city': '80331 Munich',
+    'footer.address.street': 'Rheinsberger Straße 71',
+    'footer.address.city': '10115 Berlin',
     'footer.address.country': 'Germany',
-    'footer.phone': '+49 (0) 89 123 456 789',
-    'footer.email': 'info@taylor-consulting.de',
+    'footer.phone': '+49 (0) 172 2179436',
+    'footer.email': 'info@taylorconsulting.io',
     'footer.copyright': 'All rights reserved.'
   }
 };
