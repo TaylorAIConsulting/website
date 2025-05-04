@@ -30,7 +30,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Founders
     'about.founder1.name': 'Andreas Schneider',
     'about.founder1.role': 'Co-Founder & AI Manager',
-    'about.founder1.bio': 'Mit über 10 Jahren Erfahrung in der Technologiebranche unterstützt Andreas Unternehmen dabei, das volle Potenzial von KI-Technologien auszuschöpfen.',
+    'about.founder1.bio': 'Erfahrener technischer Programmmanager, spezialisiert auf Medien-Workflows, strategische Optimierung, KI, Automation, Innovation und Effizienzsteigerung.',
     'about.founder1.badge1': 'AI Manager Zertifiziert',
     'about.founder1.badge2': 'KI-Experte',
     
@@ -176,7 +176,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Founders
     'about.founder1.name': 'Andreas Schneider',
     'about.founder1.role': 'Co-Founder & AI Manager',
-    'about.founder1.bio': 'With over 10 years of experience in the technology industry, Andreas helps companies harness the full potential of AI technologies.',
+    'about.founder1.bio': 'Experienced technical program manager, specialized in media workflows, strategic optimization, AI, automation, innovation and efficiency improvement.',
     'about.founder1.badge1': 'Certified AI Manager',
     'about.founder1.badge2': 'AI Expert',
     
