@@ -139,8 +139,8 @@ export default function ContactSection() {
                     </div>
                     <div>
                       <p className="font-semibold text-secondary">{t('contact.email')}</p>
-                      <a href="mailto:info@taylor-consulting.de" className="text-primary hover:underline">
-                        info@taylor-consulting.de
+                      <a href="mailto:info@taylorconsulting.io" className="text-primary hover:underline">
+                        info@taylorconsulting.io
                       </a>
                     </div>
                   </div>
@@ -151,8 +151,8 @@ export default function ContactSection() {
                     </div>
                     <div>
                       <p className="font-semibold text-secondary">{t('contact.phone')}</p>
-                      <a href="tel:+4989123456789" className="text-primary hover:underline">
-                        +49 (0) 89 123 456 789
+                      <a href="tel:+491722179436" className="text-primary hover:underline">
+                        +49 (0) 172 2179436
                       </a>
                     </div>
                   </div>
@@ -164,8 +164,8 @@ export default function ContactSection() {
                     <div>
                       <p className="font-semibold text-secondary">{t('contact.address')}</p>
                       <p className="text-gray-600">
-                        Innovationsstraße 42<br />
-                        80331 München<br />
+                        Rheinsberger Straße 71<br />
+                        10115 Berlin<br />
                         {t('contact.country')}
                       </p>
                     </div>
