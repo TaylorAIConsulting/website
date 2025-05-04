@@ -38,7 +38,7 @@ function getTranslatedCaseStudies(t: (key: string) => string): CaseStudyProps[] 
       ],
       testimonial: t('caseStudies.case1.testimonial'),
       author: t('caseStudies.case1.author'),
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      image: "/images/Vice-Logo.jpeg"
     },
     {
       title: t('caseStudies.case2.title'),
@@ -52,7 +52,7 @@ function getTranslatedCaseStudies(t: (key: string) => string): CaseStudyProps[] 
       ],
       testimonial: t('caseStudies.case2.testimonial'),
       author: t('caseStudies.case2.author'),
-      image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      image: "/images/VFX-Forum.png"
     },
     {
       title: t('caseStudies.case3.title'),
