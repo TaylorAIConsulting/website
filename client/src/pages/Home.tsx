@@ -5,18 +5,17 @@ import ServicesSection from "@/components/ServicesSection";
 import CaseStudiesSection from "@/components/CaseStudiesSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
-import { useQuery } from "@tanstack/react-query";
 import { useState, useEffect } from "react";
+import { useLanguage } from "../contexts/LanguageContext";
+import { getWebsiteData } from "../data/staticData";
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-
-  const { data: websiteData } = useQuery({
-    queryKey: ['/api/website-data', Date.now()], // Füge einen Timestamp hinzu, um Cache zu umgehen
-    refetchOnMount: true,
-    staleTime: 0,
-  });
+  const { language } = useLanguage();
+  
+  // Statische Daten basierend auf der aktuellen Sprache abrufen
+  const websiteData = getWebsiteData(language);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,6 +32,11 @@ export default function Home() {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
+  const heroData = {
+    headline: language === 'de' ? 'KI-Automatisierungslösungen für die Medienindustrie' : 'AI Automation Solutions for the Media Industry',
+    subline: language === 'de' ? 'Spezialisiert auf die Optimierung von Produktionsabläufen und Innovationsimpulse für Medienunternehmen' : 'Specialized in optimizing production processes and innovation impulses for media companies'
+  };
+
   return (
     <div className="min-h-screen">
       <Navbar 
@@ -42,10 +46,10 @@ export default function Home() {
         setMobileMenuOpen={setMobileMenuOpen}
       />
       <main>
-        <HeroSection data={websiteData?.hero} />
-        <AboutSection data={websiteData?.founders} />
-        <ServicesSection data={websiteData?.services} />
-        <CaseStudiesSection data={websiteData?.caseStudies} />
+        <HeroSection data={heroData} />
+        <AboutSection data={websiteData.founders} />
+        <ServicesSection data={websiteData.services} />
+        <CaseStudiesSection data={websiteData.caseStudies} />
         <ContactSection />
       </main>
       <Footer />

@@ -59,7 +59,7 @@ function FounderCard({ founder }: { founder: FounderProps }) {
         <h3 className="text-xl font-bold mb-2">{founder.name}</h3>
         <p className="text-gray-600 mb-4">{founder.role}</p>
         <div className="flex flex-wrap items-center mb-4 gap-2">
-          {founder.badges.map((badge, index) => (
+          {founder.badges && founder.badges.map((badge, index) => (
             <span key={index} className="bg-accent text-primary text-sm font-semibold py-1 px-3 rounded-full">
               {badge}
             </span>
