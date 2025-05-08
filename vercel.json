@@ -1,8 +1,7 @@
 {
     "redirects": [
       {
-        "source": "/(.*)",
-        "has": [{ "host": "www.taylorconsulting.io" }],
+        "source": "/www.taylorconsulting.io/(.*)",
         "destination": "https://taylorconsulting.io/$1",
         "permanent": true
       }
