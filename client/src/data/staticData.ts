@@ -42,15 +42,15 @@ interface CaseStudy {
 export const founderData: Omit<Founder, 'id'>[] = [
   {
     name: 'Andreas Schneider',
-    role: 'Technical Program Manager',
-    bio: 'Erfahrener technischer Programmmanager, spezialisiert auf Medien-Workflows, strategische Optimierung, KI, Automation, Innovation und Effizienzsteigerung.',
+    role: 'Founder & Managing Director',
+    bio: 'Erfahrener technischer Programmmanager mit Fokus auf digitale Transformation, skalierbare Cloud-Workflows und KI-gestützte Innovation. Spezialisiert auf die strategische Optimierung komplexer Medien-Workflows, Automatisierung und Effizienzsteigerung.',
     image: '/images/andreas_schneider_new.jpeg',
     language: 'de'
   },
   {
     name: 'Andreas Schneider',
-    role: 'Technical Program Manager',
-    bio: 'Experienced technical program manager specialized in media workflows, strategic optimization, AI, automation, innovation, and efficiency enhancement.',
+    role: 'Founder & Managing Director',
+    bio: 'Experienced technical program manager focused on digital transformation, scalable cloud workflows, and AI-driven innovation. Specialized in strategic optimization of complex media workflows, automation, and efficiency enhancement.',
     image: '/images/andreas_schneider_new.jpeg',
     language: 'en'
   },
