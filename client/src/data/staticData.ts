@@ -56,15 +56,15 @@ export const founderData: Omit<Founder, 'id'>[] = [
   },
   {
     name: 'Dino Fetzer',
-    role: 'Creative Director',
-    bio: 'Kreativdirektor mit Expertise in internationalen Projekten der Unterhaltungsindustrie, spezialisiert auf innovative KI-Lösungen und kreative Produktionsprozesse.',
+    role: 'Director',
+    bio: 'Dino Fetzer, erfahrener Werbe- Filmregisseur und zertifizierter AI-Manager, spezialisiert auf innovative KI-Automation und Content-Erstellung.',
     image: '/images/dino_fetzer.png',
     language: 'de'
   },
   {
     name: 'Dino Fetzer',
-    role: 'Creative Director',
-    bio: 'Creative Director with expertise in international entertainment industry projects, specialized in innovative AI solutions and creative production processes.',
+    role: 'Director',
+    bio: 'Dino Fetzer, experienced commercial and film director, certified AI manager specializing in innovative AI automation and content creation.',
     image: '/images/dino_fetzer.png',
     language: 'en'
   }
