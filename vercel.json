@@ -1,21 +1,11 @@
 {
-    "redirects": [
+    "builds": [
       {
-        "source": "/www.taylorconsulting.io/(.*)",
-        "destination": "https://taylorconsulting.io/$1",
-        "permanent": true
+        "src": "package.json",
+        "use": "@vercel/static-build"
       }
     ],
-    "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
-  ]
-}
+    "rewrites": [
+      { "source": "/(.*)", "destination": "/index.html" }
+    ]
+  }
