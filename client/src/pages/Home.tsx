@@ -34,7 +34,7 @@ export default function Home() {
 
   const heroData = {
     headline: language === 'de' ? 'KI-Automatisierungslösungen' : 'AI Automation Solutions',
-    subline: language === 'de' ? 'Spezialisiert auf die Optimierung von Produktionsabläufen und Innovationsimpulse' : 'Specialized in optimizing production processes and innovation impulses'
+    subline: language === 'de' ? 'Spezialisiert auf die Optimierung von Produktionsabläufen und Innovationsimpulse für ihr Unternehmen' : 'Specialized in optimizing production processes and innovation impulses for your business'
   };
 
   return (
