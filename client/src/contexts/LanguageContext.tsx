@@ -18,7 +18,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.contact': 'Kontakt',
     
     // Hero Section
-    'hero.headline': 'KI-Automatisierungslösungen für Ihr Unternehmen',
+    'hero.headline': 'KI-Automatisierungslösungen',
     'hero.subline': 'Steigern Sie Ihre Effizienz mit maßgeschneiderten KI-Lösungen',
     'hero.cta': 'Jetzt beraten lassen',
     'hero.services': 'Services entdecken',
@@ -175,7 +175,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.contact': 'Contact',
     
     // Hero Section
-    'hero.headline': 'AI Automation Solutions for Your Business',
+    'hero.headline': 'AI Automation Solutions',
     'hero.subline': 'Increase your efficiency with customized AI solutions',
     'hero.cta': 'Get consultation',
     'hero.services': 'Explore services',
