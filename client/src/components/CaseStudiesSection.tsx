@@ -75,7 +75,7 @@ function CaseStudyCard({ caseStudy, index }: { caseStudy: CaseStudyProps, index:
   const isInView = useInView(cardRef, { once: true, amount: 0.2 });
 
   return (
-    <motion.div 
+    <motion.div
       ref={cardRef}
       className="bg-gray-800 rounded-lg overflow-hidden shadow-xl"
       initial={{ opacity: 0, y: 50 }}
@@ -86,12 +86,12 @@ function CaseStudyCard({ caseStudy, index }: { caseStudy: CaseStudyProps, index:
         <div className="lg:w-1/3 relative">
           {caseStudy.image.endsWith('.mp4') ? (
             <div className="w-full h-64 lg:h-full overflow-hidden" style={{ maxHeight: '400px' }}>
-              <video 
-                className="min-w-full min-h-full object-cover" 
-                autoPlay 
-                loop 
-                muted 
-                playsInline 
+              <video
+                className="min-w-full min-h-full object-cover"
+                autoPlay
+                loop
+                muted
+                playsInline
                 preload="auto"
                 style={{
                   width: "100%",
@@ -106,13 +106,16 @@ function CaseStudyCard({ caseStudy, index }: { caseStudy: CaseStudyProps, index:
             </div>
           ) : (
             <div className={`w-full bg-black aspect-[16/9] md:aspect-[4/3] ${
-              caseStudy.image.includes('Vice') ? 'lg:aspect-auto lg:h-full flex items-center justify-center' : ''
+              caseStudy.image.includes('Vice') ? 'lg:aspect-auto lg:h-full flex items-center justify-center' :
+              caseStudy.image.includes('VFX') ? 'lg:aspect-auto lg:h-full' : ''
             }`}>
               <img
                 src={caseStudy.image}
                 alt={caseStudy.title}
                 loading="lazy"
-                className={`w-full h-full ${caseStudy.image.includes('Vice') ? 'object-contain' : 'object-cover'}`}
+                className={`w-full h-full ${
+                  caseStudy.image.includes('Vice') ? 'object-contain' : 'object-cover'
+                }`}
               />
             </div>
           )}
