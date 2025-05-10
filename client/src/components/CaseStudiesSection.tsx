@@ -105,12 +105,14 @@ function CaseStudyCard({ caseStudy, index }: { caseStudy: CaseStudyProps, index:
               </video>
             </div>
           ) : (
-            <img 
-              className="h-64 lg:h-full w-full object-cover" 
-              src={caseStudy.image} 
-              alt={caseStudy.title} 
-              loading="lazy"
-            />
+            <div className="aspect-[16/9] md:aspect-[4/3] w-full bg-black">
+              <img 
+                className="object-contain w-full h-full" 
+                src={caseStudy.image} 
+                alt={caseStudy.title} 
+                loading="lazy"
+              />
+            </div>  
           )}
         </div>
         <div className="lg:w-2/3 p-8">
