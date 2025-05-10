@@ -23,7 +23,6 @@ interface CaseStudiesSectionProps {
   data?: CaseStudyProps[];
 }
 
-// Function to get translated case studies
 function getTranslatedCaseStudies(t: (key: string) => string): CaseStudyProps[] {
   return [
     {
@@ -106,7 +105,9 @@ function CaseStudyCard({ caseStudy, index }: { caseStudy: CaseStudyProps, index:
               </video>
             </div>
           ) : (
-            <div className={`w-full bg-black aspect-[16/9] md:aspect-[4/3] ${caseStudy.image.includes('Vice') ? 'lg:aspect-auto lg:h-full flex items-center justify-center' : ''}`}>
+            <div className={`w-full bg-black aspect-[16/9] md:aspect-[4/3] ${
+              caseStudy.image.includes('Vice') ? 'lg:aspect-auto lg:h-full flex items-center justify-center' : ''
+            }`}>
               <img
                 src={caseStudy.image}
                 alt={caseStudy.title}
@@ -116,6 +117,7 @@ function CaseStudyCard({ caseStudy, index }: { caseStudy: CaseStudyProps, index:
             </div>
           )}
         </div>
+
         <div className="lg:w-2/3 p-8">
           <div className="flex flex-wrap items-center mb-4 gap-2">
             <span className="bg-primary/20 text-primary text-xs font-semibold py-1 px-3 rounded-full">
@@ -126,9 +128,7 @@ function CaseStudyCard({ caseStudy, index }: { caseStudy: CaseStudyProps, index:
             </span>
           </div>
           <h3 className="text-xl font-bold mb-3">{caseStudy.title}</h3>
-          <p className="text-gray-300 mb-4">
-            {caseStudy.description}
-          </p>
+          <p className="text-gray-300 mb-4">{caseStudy.description}</p>
           <ul className="space-y-2 text-gray-300 mb-6">
             {caseStudy.results.map((result, idx) => (
               <li key={idx} className="flex items-start">
@@ -155,7 +155,7 @@ export default function CaseStudiesSection({ data }: CaseStudiesSectionProps) {
   return (
     <section id="case-studies" ref={sectionRef} className="section py-20 bg-secondary text-white">
       <div className="container mx-auto px-6">
-        <motion.div 
+        <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
