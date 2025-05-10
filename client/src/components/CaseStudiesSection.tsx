@@ -93,6 +93,7 @@ function CaseStudyCard({ caseStudy, index }: { caseStudy: CaseStudyProps, index:
                 loop 
                 muted
                 playsInline
+                preload="auto"
                 style={{
                   width: "100%",
                   height: "100%",
@@ -107,7 +108,7 @@ function CaseStudyCard({ caseStudy, index }: { caseStudy: CaseStudyProps, index:
           ) : (
             <div className="aspect-[16/9] md:aspect-[4/3] w-full bg-black">
               <img 
-                className="object-contain w-full h-full" 
+                className="object-cover w-full h-full"
                 src={caseStudy.image} 
                 alt={caseStudy.title} 
                 loading="lazy"
