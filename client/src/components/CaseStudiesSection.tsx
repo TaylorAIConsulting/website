@@ -91,14 +91,14 @@ function CaseStudyCard({ caseStudy, index }: { caseStudy: CaseStudyProps, index:
                 className="min-w-full min-h-full object-cover" 
                 autoPlay 
                 loop 
-                muted
-                playsInline
+                muted 
+                playsInline 
                 preload="auto"
                 style={{
                   width: "100%",
                   height: "100%",
                   objectFit: "cover",
-                  objectPosition: "center 38%" // Fokus auf das Gesicht
+                  objectPosition: "center 38%",
                 }}
               >
                 <source src={caseStudy.image} type="video/mp4" />
@@ -106,14 +106,14 @@ function CaseStudyCard({ caseStudy, index }: { caseStudy: CaseStudyProps, index:
               </video>
             </div>
           ) : (
-            <div className="aspect-[16/9] md:aspect-[4/3] w-full min-h-[200px] bg-black">
-              <img 
-                className="object-cover w-full h-full"
-                src={caseStudy.image} 
-                alt={caseStudy.title} 
+            <div className={`w-full bg-black aspect-[16/9] md:aspect-[4/3] ${caseStudy.image.includes('Vice') ? 'lg:aspect-auto lg:h-full flex items-center justify-center' : ''}`}>
+              <img
+                src={caseStudy.image}
+                alt={caseStudy.title}
                 loading="lazy"
+                className={`w-full h-full ${caseStudy.image.includes('Vice') ? 'object-contain' : 'object-cover'}`}
               />
-            </div>  
+            </div>
           )}
         </div>
         <div className="lg:w-2/3 p-8">
