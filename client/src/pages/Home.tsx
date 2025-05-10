@@ -33,8 +33,8 @@ export default function Home() {
   };
 
   const heroData = {
-    headline: language === 'de' ? 'KI-Automatisierungslösungen für die Medienindustrie' : 'AI Automation Solutions for the Media Industry',
-    subline: language === 'de' ? 'Spezialisiert auf die Optimierung von Produktionsabläufen und Innovationsimpulse für Medienunternehmen' : 'Specialized in optimizing production processes and innovation impulses for media companies'
+    headline: language === 'de' ? 'KI-Automatisierungslösungen' : 'AI Automation Solutions',
+    subline: language === 'de' ? 'Spezialisiert auf die Optimierung von Produktionsabläufen und Innovationsimpulse' : 'Specialized in optimizing production processes and innovation impulses'
   };
 
   return (
